@@ -9,9 +9,11 @@ The use of threads can improve performance when you “offload” computation to
 
 1. Create a new project by Clicking on the `File | New | New Project` menu item
   - The New Project window will be displayed
-2. Select Visual C# | Windows Desktop | Console Application
+2. Select `Visual C# | Windows Desktop | Console Application`
   - make sure the .NET Framework 4.5.1 is selected along with the Create directory for solution checkbox
 3. Enter the Name of `ConsoleThreads` and click on the OK Button
+  
+
   ![create-console-threads](https://cloud.githubusercontent.com/assets/8953261/16710772/0f2c2cae-45f8-11e6-99a9-4ff9ee05a8a3.png)
   
 4. In the Main method, type in the following code:
@@ -76,6 +78,6 @@ The use of threads can improve performance when you “offload” computation to
 6. Save the project and press F5 to execute
 
 
-You will see a console window displayed showing the calls from either the thread1Starter method or the thread2Starter method. Notice that the threads are not given the same amount of processing time. That is determined by the operating system
+  You will see a console window displayed showing the calls from either the thread1Starter method or the thread2Starter method. Notice that the threads are not given the same amount of processing time. That is determined by the operating system
 
 
