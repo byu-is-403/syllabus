@@ -1,4 +1,4 @@
-# Java Compared to CSharp
+<h1>Java Compared to C#</h1>
 
 ## Program Structure
 
@@ -17,7 +17,7 @@ public class HelloWorld {
 }
 ```
 
-### CSharp
+<h3>C#</h3>
 
 ```csharp
 using System;
@@ -45,7 +45,7 @@ namespace Hello {
 
 ```
 
-### CSharp
+<h3>C#</h3>
 ```csharp
 // Single line
 /* Multiple
@@ -84,7 +84,7 @@ double z = 3.5;
 x = (int)z; // x is 3 (truncates decimal)
 ```
 
-### CSharp
+<h3>C#</h3>
 
 ```csharp
 
@@ -124,7 +124,7 @@ x = (int) z;   // x is 3  (truncates decimal)
 final double PI = 3.14;
 ```
 
-### CSharp
+<h3>C#</h3>
 
 ```csharp
 const double PI = 3.14;
@@ -141,8 +141,8 @@ const double PI = 3.14;
 
 // Arithmetic
 +  -  *  /
-%  (mod)
-/   (integer division if both operands are ints)
+%  // (mod)
+/  // (integer division if both operands are ints)
 Math.Pow(x, y)
 
 // Assignment
@@ -157,7 +157,7 @@ Math.Pow(x, y)
 +
 ```
 
-### CSharp
+<h3>C#</h3>
 
 ```csharp
 // Comparison
@@ -165,8 +165,8 @@ Math.Pow(x, y)
 
 // Arithmetic
 +  -  *  /
-%  (mod)
-/   (integer division if both operands are ints)
+%  // (mod)
+/  // (integer division if both operands are ints)
 Math.Pow(x, y)
 
 // Assignment
@@ -205,7 +205,7 @@ switch (selection) {
 }
 ```
 
-### CSharp
+<h3>C#</h3>
 
 ```csharp
 greeting = age < 20 ? "What's up?" : "Hello";
@@ -248,6 +248,7 @@ for (int i : numArray)  // foreach construct
   
 // for loop can be used to iterate through any Collection
 import java.util.ArrayList;
+
 ArrayList<Object> list = new ArrayList<Object>();
 list.add(10);    // boxing converts to instance of Integer
 list.add("Bisons");
@@ -257,7 +258,7 @@ for (Object o : list)
   System.out.println(o);
 ```
 
-### CSharp
+<h3>C#</h3>
 
 ```csharp
 while (i < 10) 
@@ -275,6 +276,7 @@ foreach (int i in numArray)
   
 // foreach can be used to iterate through any collection 
 using System.Collections;
+
 ArrayList list = new ArrayList();
 list.Add(10);
 list.Add("Bisons");
@@ -289,6 +291,7 @@ foreach (Object o in list)
 ### Java
 ```java
 int nums[] = {1, 2, 3}; // or   int[] nums = {1, 2, 3};
+
 for (int i = 0; i < nums.length; i++)
   System.out.println(nums[i]);
 
@@ -299,9 +302,10 @@ float twoD[][] = new float[rows][cols];
 twoD[2][0] = 4.5;
 ```
 
-### CSharp
+<h3>C#</h3>
 ```csharp
 int[] nums = {1, 2, 3};
+
 for (int i = 0; i < nums.Length; i++)
   Console.WriteLine(nums[i]);
 
@@ -336,8 +340,7 @@ void TestFunc(int x, Point p) {
 }
 ```
 
-
-### CSharp
+<h3>C#</h3>
 
 ```csharp
 // Return single value
@@ -389,7 +392,7 @@ buffer.replace(4, 7, "TWO");
 System.out.println(buffer);     // Prints "one TWO three"
 ```
 
-### CSharp
+<h3>C#</h3>
 ```csharp
 // String concatenation
 string school = "Harding "; 
@@ -433,7 +436,7 @@ try {
 }
 ```
 
-### CSharp
+<h3>C#</h3>
 
 ```csharp
 Exception up = new Exception("Something is really wrong."); 
@@ -463,7 +466,7 @@ import harding.compsci.graphics.Rectangle;
 import harding.compsci.graphics.*; 
 ```
 
-## CSharp
+<h3>C#</h3>
 
 ```csharp
 namespace Harding.Compsci.Graphics {
@@ -492,7 +495,7 @@ class FootballGame extends Competition {
 }
 ```
 
-### CSharp
+<h3>C#</h3>
 
 ```csharp
 // Accessibility keywords 
@@ -525,7 +528,7 @@ class SuperHero {
 }
 ```
 
-### CSharp
+<h3>C#</h3>
 
 ```csharp
 class SuperHero {
@@ -566,7 +569,7 @@ if (obj instanceof SuperHero)
   System.out.println("Is a SuperHero object.");
 ```
 
-### CSharp
+<h3>C#</h3>
 
 ```csharp
 SuperHero hero = new SuperHero(); 
@@ -610,7 +613,8 @@ int s = shoe.getSize();
 shoe.setSize(s+1);
 ```
 
-### CSharp
+<h3>C#</h3>
+
 ```csharp
 private int mSize;
 
