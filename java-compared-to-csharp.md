@@ -2,7 +2,7 @@
 
 ## Program Structure
 
-### Java
+##### Java
 
 ```java
 package hello;
@@ -17,7 +17,7 @@ public class HelloWorld {
 }
 ```
 
-<h3>C#</h3>
+<h4>C#</h4>
 
 ```csharp
 using System;
@@ -36,7 +36,7 @@ namespace Hello {
 
 ## Comments
 
-### Java
+#### Java
 ```java
 // Single line
 /* Multiple
@@ -45,7 +45,7 @@ namespace Hello {
 
 ```
 
-<h3>C#</h3>
+<h4>C#</h4>
 ```csharp
 // Single line
 /* Multiple
@@ -56,7 +56,7 @@ namespace Hello {
 
 ## Data Types
 
-### Java
+#### Java
 
 ```java
 // Primitive Types
@@ -84,7 +84,7 @@ double z = 3.5;
 x = (int)z; // x is 3 (truncates decimal)
 ```
 
-<h3>C#</h3>
+<h4>C#</h4>
 
 ```csharp
 
@@ -117,14 +117,14 @@ x = (int) z;   // x is 3  (truncates decimal)
 
 ## Constants
 
-### Java
+#### Java
 
 ```java
 // May be initialized in a constructor 
 final double PI = 3.14;
 ```
 
-<h3>C#</h3>
+<h4>C#</h4>
 
 ```csharp
 const double PI = 3.14;
@@ -133,7 +133,7 @@ const double PI = 3.14;
 
 ## Operators
 
-### Java
+#### Java
 
 ```java
 // Comparison
@@ -157,7 +157,7 @@ Math.Pow(x, y)
 +
 ```
 
-<h3>C#</h3>
+<h4>C#</h4>
 
 ```csharp
 // Comparison
@@ -182,7 +182,7 @@ Math.Pow(x, y)
 
 ## Choices
 
-### Java
+#### Java
 
 ```java
 greeting = age < 20 ? "What's up?" : "Hello";
@@ -205,7 +205,7 @@ switch (selection) {
 }
 ```
 
-<h3>C#</h3>
+<h4>C#</h4>
 
 ```csharp
 greeting = age < 20 ? "What's up?" : "Hello";
@@ -230,7 +230,7 @@ switch (color) {
 
 ## Loops
 
-### Java
+#### Java
 
 ```java
 while (i < 10) 
@@ -258,7 +258,7 @@ for (Object o : list)
   System.out.println(o);
 ```
 
-<h3>C#</h3>
+<h4>C#</h4>
 
 ```csharp
 while (i < 10) 
@@ -288,7 +288,7 @@ foreach (Object o in list)
 
 ## Arrays
 
-### Java
+#### Java
 ```java
 int nums[] = {1, 2, 3}; // or   int[] nums = {1, 2, 3};
 
@@ -302,7 +302,7 @@ float twoD[][] = new float[rows][cols];
 twoD[2][0] = 4.5;
 ```
 
-<h3>C#</h3>
+<h4>C#</h4>
 ```csharp
 int[] nums = {1, 2, 3};
 
@@ -318,7 +318,7 @@ twoD[2,0] = 4.5f;
 
 ## Functions
 
-### Java
+#### Java
 ```java
 // Return single value
 int Add(int x, int y) { 
@@ -340,7 +340,7 @@ void TestFunc(int x, Point p) {
 }
 ```
 
-<h3>C#</h3>
+<h4>C#</h4>
 
 ```csharp
 // Return single value
@@ -365,7 +365,7 @@ void TestFunc(int x, ref int y,  ref Point p2) {
 
 ## Strings
 
-### Java
+#### Java
 
 ```java
 // String concatenation
@@ -392,7 +392,7 @@ buffer.replace(4, 7, "TWO");
 System.out.println(buffer);     // Prints "one TWO three"
 ```
 
-<h3>C#</h3>
+<h4>C#</h4>
 ```csharp
 // String concatenation
 string school = "Harding "; 
@@ -420,7 +420,7 @@ Console.WriteLine(buffer);     // Prints "one TWO three"
 
 ## Exception Handling
 
-### Java
+#### Java
 
 ```java
 // Must be in a method that is declared to throw this exception
@@ -436,7 +436,7 @@ try {
 }
 ```
 
-<h3>C#</h3>
+<h4>C#</h4>
 
 ```csharp
 Exception up = new Exception("Something is really wrong."); 
@@ -454,7 +454,7 @@ try {
 
 ## Namespaces
 
-### Java
+#### Java
 
 ```java
 package harding.compsci.graphics;
@@ -466,7 +466,7 @@ import harding.compsci.graphics.Rectangle;
 import harding.compsci.graphics.*; 
 ```
 
-<h3>C#</h3>
+<h4>C#</h4>
 
 ```csharp
 namespace Harding.Compsci.Graphics {
@@ -480,7 +480,7 @@ using Harding.Compsci.Graphics;
 
 ## Classes
 
-### Java
+#### Java
 
 ```java
 // Accessibility keywords 
@@ -495,7 +495,7 @@ class FootballGame extends Competition {
 }
 ```
 
-<h3>C#</h3>
+<h4>C#</h4>
 
 ```csharp
 // Accessibility keywords 
@@ -514,7 +514,7 @@ class FootballGame : Competition {
 
 ## Constructors
 
-### Java
+#### Java
 
 ```java
 class SuperHero { 
@@ -528,7 +528,7 @@ class SuperHero {
 }
 ```
 
-<h3>C#</h3>
+<h4>C#</h4>
 
 ```csharp
 class SuperHero {
@@ -546,7 +546,7 @@ class SuperHero {
 
 ## Objects
 
-### Java
+#### Java
 
 ```java
 SuperHero hero = new SuperHero();
@@ -569,7 +569,7 @@ if (obj instanceof SuperHero)
   System.out.println("Is a SuperHero object.");
 ```
 
-<h3>C#</h3>
+<h4>C#</h4>
 
 ```csharp
 SuperHero hero = new SuperHero(); 
@@ -597,7 +597,7 @@ if (obj is SuperHero)
 
 ## Properties
 
-### Java
+#### Java
 ```java
 private int mSize;
 
@@ -613,7 +613,7 @@ int s = shoe.getSize();
 shoe.setSize(s+1);
 ```
 
-<h3>C#</h3>
+<h4>C#</h4>
 
 ```csharp
 private int mSize;
