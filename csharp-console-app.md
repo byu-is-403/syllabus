@@ -11,7 +11,7 @@ This tutorial will show the very basics of a writing data to the console so the 
 - Select File | New | Project
 - Select Visual C# | Windows Desktop and choose Console Application (NOTE: Make sure the .NET Framework 4.5.1 is selected)
 - Make sure the Create directory for solution checkbox is checked
-- Name the Project “MyFirstConsole” and click on the OK Button
+- Name the Project `MyFirstConsole` and click on the OK Button
 
   ![create-console-app](https://cloud.githubusercontent.com/assets/8953261/16710334/dd658374-45e7-11e6-8371-90bc7af5962f.png)
 
