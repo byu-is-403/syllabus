@@ -30,7 +30,7 @@
 
 ## Using Threads
 
-1. Include the System.Threading namespace
+1. Include the `System.Threading` namespace
 2. Create your threads
 3. Start the threads
 4. Join the threads
@@ -55,7 +55,7 @@
 
 - **Un-started State**: the thread is created but has not been started
 - **Ready State (Running)**: thread is ready to run and waiting for the CPU cycle
-- **Not Runnable State (WaitSleepJoin)**: the thread is not executable because the Sleep or Wait methods have been called or it is (Blocked) being blocked by other I/O operations
+- **Not Runnable State (Wait, Sleep, Join)**: the thread is not executable because the Sleep or Wait methods have been called or it is (Blocked) being blocked by other I/O operations
 - **Dead State(Stopped)**: thread execution is aborted or has been completed
 - **Suspend**: Paused by program and waiting for command to resume
 
