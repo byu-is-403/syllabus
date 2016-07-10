@@ -234,5 +234,175 @@ public class GuestResponse {
   ```
 
 
+### Lambda Expression
+
+- A lambda expression is away to write an anonymous function, i.e. a function without a name. What you have on the left side of the "arrow" are the function parameters, and what you have on the right side are the function body. Thus, (x => x.Name) logically translates to something like string Function(Data x) { return x.Name } the types string and Data will obviously vary and be derived from the context.
+- The model => item.FirstName means logically it would translate to string
+
+  ```csharp
+  Function(Model model) {
+    return item.FirstName;
+  }
+  ```
+- Basically this is a function with a parameter, but this parameter is not used.
+
+
+### HTML Forms
+
+- The Html Helper BeginForm indicates the beginning of an html form that will be used to gather input
+- An EndForm is not needed since the BeginForm helper automatically closes out the form element
+- The `<input>` element is the most important form element
+- `<input type="submit">` defines a button for submitting a form to a form-handler
+
+  
+  `<input type="submit" value="Submit RSVP" />`
+- This states that there will be a button with the text Submit RSVP and will be used to submit the form to the server once clicked
+
+
+### Controllers for HttpGet and HttpPost
+
+- The HttpGet request attribute is what the browser issues each time someone clicks on a link and will be responsible for display the initial blank form
+- The HttpPost request attribute is responsible for receiving submitted data and deciding what to do with it
+- Both of the action methods will have the same name but MVC will make sure the correct action method is selected based upon whether the system is getting the data or the user clicked on the submit button
+- In order to use the model in the controller you need to make sure it is imported
+
+
+  `using EmptyView.Models;` (where EmptyView is the name of the project)
+  
+### HttpGet
+
+```csharp
+[HttpGet]
+public ViewResult RsvpForm() {
+  return View();
+}
+```
+
+- This action method is used to render the view RsvpForm.cshtml and generate the form
+- The square brackets indicate it is an attribute and the HttpGet is a reserved word to MVC
+- NOTE: Make sure you have added the proper using statement to make sure you have access to the model in your controller
+
+  ```csharp
+  using WebApplication4.Models; //where WebApplication4 is the name of your project
+  ```
+  
+### HttpPost
+
+```csharp
+[HttpPost]
+public ViewResult RsvpForm(GuestResponse guestResponse) {
+  return View("Thanks", guestResponse);
+}
+```
+
+- The post action method is using Model Binding where the incoming data (guestResponse of type GuestResponse) is parsed and the key/value pairs in the Http request are used to populate the properties of the domain model type
+- The names of the input elements are used to set the values of the properties in the instance of the model class which is then passed to the Post-enabled action method (the form fields values are automatically passed to the guestResponse object model properties)
+
+
+### Modify the HomeController
+
+```csharp
+// GET: /Home/
+
+public ActionResult Index()
+{
+  int hour = DateTime.Now.Hour;
+  ViewBag.Greeting = hour < 12 ? "Good Morning" : "Good Afternoon";
+  return View();
+}
+
+[HttpGet]
+public ViewResult RsvpForm()
+{
+  return View();
+}
+
+[HttpPost]
+public ViewResult RsvpForm(GuestResponse guestResponse)
+{
+  return View("Thanks", guestResponse);
+}
+```
+
+  
+**NOTE: Don't forget to add the using for the models" using EmptyView.Models;“ where EmptyView is the name of the project**
+
+
+### Thank You View using the Model
+
+- Let's create another view that uses the model that was populated by the RsvpForm view
+- Right mouse click in any of the HomeController methods and choose Add View
+- Call the view Thanks and choose the Empty Template
+- Then choose the GuestResponse model
+
+
+**NOTE: Visual Studio will create the Thanks.cshtml view. Notice the @model statement?**
+
+
+- Write the following html for the Thanks View
+
+  ```html
+  <body>
+    <div> 
+      <h1>Thank you @Model.Name</h1>
+      @if (Model.WillAttend == true)
+      {
+          <p>We look forward to seeing you</p>
+      }
+      else
+      {
+          <p>Hopefully next time you can make it</p>
+      }
+    </div>
+  </body>
+  ```
+  
+### Validation in the model
+
+- ASP.Net MVC supports declarative validation rules define with attirbutes
+- Let's modify the model to require input using the [Required] validation attribute
+
+  ```csharp
+  public class GuestResponse {
+    [Required(ErrorMessage = "Please enter your name")]
+    public string Name { get; set; }
+  
+    [Required(ErrorMessage = "Please enter your email")]
+    public string Email { get; set; }
+  
+    [Required(ErrorMessage = "Please enter your phone number")]
+    public string Phone { get; set; }
+  
+    [Required(ErrorMessage = "Please specify if you will attend")]
+    public bool? WillAttend { get; set; }
+  }
+  ```
+
+
+  NOTE: Notice that the Required usage generates an error? That is because you need to use the data annotations class. Right mouse click on one of the errors and choose Resolve | using System.ComponentModel.DataAnnotations;
+  
+  
+  If the WillAttend is null then it will generate an error message
+  
+  
+### Validation in the Controller
+  
+- Now that the model is set up, let's add the code to the controller
+- The ModelState.IsValid property checks to see if all items pass validation
+- You will add this C# statement in your controller and if the model does not validate then you will return the view for the user to fix the problems
+
+  ```csharp
+   [HttpPost]
+    public ViewResult RsvpForm(GuestResponse guestResponse) {
+      if (ModelState.IsValid) {
+        return View("Thanks", guestResponse);
+      } else {
+        //Validation Error
+        return View();
+      }
+    }
+  ```
+
+
 
 
