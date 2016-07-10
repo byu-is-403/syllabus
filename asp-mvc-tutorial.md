@@ -478,8 +478,113 @@
 - Add the following code:
 
   ```html
+  @using (Html.BeginForm()) {
+  
+    @Html.ValidationSummary();
+  
+    <p>Name:    @Html.TextBoxFor( x => x.Name)</p>
+    <p>Email:   @Html.TextBoxFor( x => x.Email)</p>
+    <p>Phone:   @Html.TextBoxFor( x => x.Phone)</p>
+    <p>Will you attend:    
+                @Html.DropDownListFor( x => x.WillAttend, new[] 
+                  {
+                    new SelectListItem()
+                    {
+                      Text = "Yes", Value = bool.TrueString
+                    },
+                    new SelectListItem()
+                    {
+                      Text = "No", Value = bool.FalseString
+                    }
+                  },
+                  "Please choose one")</p>
+    <input type="submit" value="Submit RSVP">
+  }
   ```
 
+  
+  **NOTE: The Html.ValidationSummary method creates a holding list of items that failed validation. This list is hidden on the form so the end user does not see it. MVC add the error messages to this list for every broken validation rule. **
+  
+  
+  **Notice that the data entered into the form is not cleared. This is a benefit of model binding.**
+  
+- Save and run the program
+
+  
+  **NOTE: HTML Helper methods simply return a string and are used insert HTML tag within your code. For example, the Html.BeginForm() Helper method is used to create the opening and closing HTML <form> tags.  The Html.TextBox() Helper method is used to create input tags.**
+  
+  
+  Previously in the RsvpForm.cshtml View, we placed the code:
+  `@Html.TextBoxFor( x => x.Name)`
+  
+  
+  This Html helper method generates code that looks like:
+  `<input data-val=”true” data-val-required=”Please enter your name” id=”Name” name=”Name” type=”text” value=”” />`
+  
+  
+  When a validation rule is broken for this tag, the following code automatically is generated:
+  `<input class=”input-validation-error” data-val=”true” data-val-required=”Please enter your name” id=”Name” name=”Name” type=”text” value=”” />`
+  
+  
+  The HTML Helper method added a class to the tag called input-validation-error.
+  
+  
+  We can add a CSS style for this class and others that HTML Helper methods invoke
+  
+- Right-click on the FirstMVCSite and select Add, New Folder
+- Type in the name `Content`
+
+  ![content](https://cloud.githubusercontent.com/assets/8953261/16711102/b6464e3e-4607-11e6-92c0-cf0942d02ee4.png)
+  
+- Right-click on the Content folder and choose Add, New Item
+- Scroll down and select Style Sheet and click on the Add button
+
+  ![style-sheet](https://cloud.githubusercontent.com/assets/8953261/16711109/e78c0e84-4607-11e6-8c1b-bfe59c32ab11.png)
+
+- Right-click on the newly added Style Sheet and choose Rename
+- Change the name to Site.css
+  
+  ![site-css](https://cloud.githubusercontent.com/assets/8953261/16711118/18dccafa-4608-11e6-9243-12f1f950ec5c.png)
+
+- Modify the Site.css to be the following (NOTE: Remove the .body tag)
+
+  ```css
+  .field-validation-error {
+    color: #f00;
+  }
+  .field-validation-valid {
+    display: none;
+  }
+  .input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+  }
+  .validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+  }
+  .validation-summary-valid {
+    display: none;
+  }
+  ```
+  
+- Open the RsvpForm.cshtml View
+- Add the following code:
+
+  ```html
+   <head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/Content/Site.css" />
+    <title>RsvpForm</title>
+  </head>
+  ```
+  
+- Save and run the project
+
+
+
+
+  
 
 
 
