@@ -87,3 +87,53 @@ The foreach uses razor and it creates a for loop that is used for ever record in
 - This HTML helper creates a link similar to what was described earlier.  The link underlined text would be "Delete" and the action would be Delete in the Teams controller.  Notice that another parameter is passed which is a new object holding the value of the teamID and the parameter name is id.  This should match your paramter coming into the controller
 
 
+## Teams Controller
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
+using System.Linq;
+using System.Net;
+using System.Web;
+using System.Web.Mvc;
+using FantasyBasketball.DAL;
+using FantasyBasketball.Models;
+
+namespace FantasyBasketball.Controllers {
+  public class TeamsController : Controller {
+    private NBAContext db = new NBAContext();
+    
+    // GET: Teams
+    public ActionResult Index() {
+      return View(db.Teams.ToList());
+    }
+  }
+}
+```
+
+```csharp
+private NBAContext db = new NBAContext();
+```
+
+Since we did scaffolding, the NBAContext dbcontext class that we set up is automatically included.  The variable in the controller representing the NBAContext/Database will be called db
+
+```csharp
+// Get: Teams
+public ActionResult Index() {
+  return View(db.Teams.ToList());
+}
+```
+The Index Get ActionResult return to the Teams Index View, the db (NBAContext) Teams Model (linked to the Team table through the DbSet) as a list.  IOW, it returns all of the records from the Team table to the Index view for display
+
+
+In the Index View, if you clicked on the Edit action in the View it would take you to the Edit ActionResult in the Team Controller
+
+```html
+<!-- in Team Index View -->
+
+@Html.ActionLink("Edit", "Edit", new { id=item.teamID })
+```
+
+This is the team ID passed as a parameter to the Edit ActionResult method in the Team Controller
