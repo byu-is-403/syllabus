@@ -55,4 +55,4 @@ This tutorial will show the very basics of a writing data to the console so the 
 
 The Project code is contained within the Program.cs source code file. It contains using statements which inform the compiler which libraries need to be imported. The namespace allows you to organize code and specify scope. It is similar to a package in Java.
 
-Within the namespace you can write multiple classes. The static void Main specifies the starting method for the application. 
+Within the namespace you can write multiple classes. The static void Main specifies the starting method for the application.
