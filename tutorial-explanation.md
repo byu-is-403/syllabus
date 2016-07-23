@@ -1,139 +1,62 @@
 # Tutorial Explanation
 
+This tutorial explains the syntax used in the generated scaffolding code resulting from the EF Tutorial.
+
+
 ## Teams, Index View
 
 - `@Html.DisplayNameFor` (extracts the column name out of the table i.e. teamName)
 - `@Html.DisplayFor` (extracts the column text out of the table i.e. Utah Jazz)
 - `@Html.ActionLink` (text to display as a link, controller to call (Edit in the Teams controller), what data to pass the controller (teamID)
 
-```html
-@model IEnumerable<FantasyBasketball.Models.Team>
+![indexviewmodels](https://cloud.githubusercontent.com/assets/8953261/17080633/858d5624-50f3-11e6-9d6a-0d47e58a1930.png)
 
-@{
-  ViewBag.Title = "Index";
-}
+![displaynamefortablenameview](https://cloud.githubusercontent.com/assets/8953261/17080637/a0ca2bd8-50f3-11e6-96e8-f4b508face6c.png)
 
-<h2>Index</h2>
-
-<p>
-  @Html.ActionLink("Create New", "Create")
-</p>
-
-<table class="table">
-  <tr>
-    <th>
-      @Html.DisplayNameFor(model => model.teamName)
-    </th>
-    <th></th>
-  </tr>
-  
-  @foreach (var item in Model) {
-    <tr>
-      <td>
-        @Html.DisplayFor(modelItem => item.teamName)
-      <td>
-      <td>
-        @Html.ActionLink("Edit Team", "Edit", new { id=item.teamID }) | 
-        @Html.ActionLink("Details", "Details", new { id=item.teamID }) | 
-        @Html.ActionLink("Delete", "Delete", new { id=item.teamID })
-      </td>
-    </tr>
-  }
-  
-</table>
-
-```
-
-
-### Explanation of helpers
-
-```html
-@model IEnumerable<FantasyBasketball.Models.Team>
-```
-
-Includes the Team model which links back to the Team table through the DbSet in our NBAContext class.  The IEnumerable says to return a list of objects/rows
-
-```html
-@Html.ActionLink("Create New", "Create")
-```
-
-This HTML Helper creates a link on the page with the text of Create New.  When clicked it will call the Create action method in the Team controller
-
-```html
-@Html.DisplayNameFor(model => model.teamName)
-```
-
-This HTML Helper extracts the column name from the model/table.  For example, the teamName column name in the table is "teamName" so that will be displayed.  You will see later that you can set up other column display names using attributes in the model
-
-```html
-@foreach (var item in Model) {
-  ...
-}
-```
-
-The foreach uses razor and it creates a for loop that is used for ever record in the model.  For each record in the model being used, Team, get the row and store it to the variable called item.  You could have used any variable name instead of item (i.e. i, row, etc.)
-
-```html
-@Html.DisplayFor(modelItem => item.teamName)
-```
-
-- The `DisplayFor` extracts the data from the model item record for the teamName column
-- `modelItem => ` is a lambda expression delegate / function pointer.  The word modelItem is pretty much ignored and you could have used any word
-
-```html
-@Html.ActionLink("Delete", "Delete", new { id=item.teamID })
-```
-
-- This HTML helper creates a link similar to what was described earlier.  The link underlined text would be "Delete" and the action would be Delete in the Teams controller.  Notice that another parameter is passed which is a new object holding the value of the teamID and the parameter name is id.  This should match your paramter coming into the controller
+![foreachindexview](https://cloud.githubusercontent.com/assets/8953261/17080638/ad1561fa-50f3-11e6-8d1f-2323ead8881c.png)
 
 
 ## Teams Controller
 
-```csharp
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
-using FantasyBasketball.DAL;
-using FantasyBasketball.Models;
+![teamscontroller](https://cloud.githubusercontent.com/assets/8953261/17080639/c17c6c60-50f3-11e6-891b-7e83be067cd8.png)
 
-namespace FantasyBasketball.Controllers {
-  public class TeamsController : Controller {
-    private NBAContext db = new NBAContext();
-    
-    // GET: Teams
-    public ActionResult Index() {
-      return View(db.Teams.ToList());
-    }
-  }
-}
-```
-
-```csharp
-private NBAContext db = new NBAContext();
-```
-
-Since we did scaffolding, the NBAContext dbcontext class that we set up is automatically included.  The variable in the controller representing the NBAContext/Database will be called db
-
-```csharp
-// Get: Teams
-public ActionResult Index() {
-  return View(db.Teams.ToList());
-}
-```
-The Index Get ActionResult return to the Teams Index View, the db (NBAContext) Teams Model (linked to the Team table through the DbSet) as a list.  IOW, it returns all of the records from the Team table to the Index view for display
+![indexgetcontroller](https://cloud.githubusercontent.com/assets/8953261/17080643/da99ab04-50f3-11e6-98ff-c447dc2079cc.png)
 
 
 In the Index View, if you clicked on the Edit action in the View it would take you to the Edit ActionResult in the Team Controller
 
-```html
-<!-- in Team Index View -->
+**NOTE: This is in the Index View**
 
-@Html.ActionLink("Edit", "Edit", new { id=item.teamID })
-```
 
-This is the team ID passed as a parameter to the Edit ActionResult method in the Team Controller
+![editlinkview](https://cloud.githubusercontent.com/assets/8953261/17080644/f537a0ec-50f3-11e6-8cd7-7f5555deae53.png)
+
+
+**Here is the Edit GET Action Method in the Teams Controller**
+
+![editgetcontroller](https://cloud.githubusercontent.com/assets/8953261/17080648/0999dc4e-50f4-11e6-9f7a-768e42a2bf2c.png)
+
+
+**Here is the Edit POST Action Method**
+
+![editpostcontroller](https://cloud.githubusercontent.com/assets/8953261/17080654/21a371a6-50f4-11e6-90b6-5528493a0591.png)
+
+
+**Here is the Create POST Action Method**
+
+![createpostcontroller](https://cloud.githubusercontent.com/assets/8953261/17080656/3885ca2c-50f4-11e6-9306-8f1c6854eea2.png)
+
+
+**Here is the Delete View**
+
+![htmlbeginformview](https://cloud.githubusercontent.com/assets/8953261/17080659/505ab5e0-50f4-11e6-88be-9b8ebe12c401.png)
+
+
+**Here is the DELETE Get**
+
+![deletegetcontroller](https://cloud.githubusercontent.com/assets/8953261/17080661/69086f9c-50f4-11e6-85fd-af56e12e01aa.png)
+
+
+**Here is the DELETE Post**
+
+![deletepostcontroller](https://cloud.githubusercontent.com/assets/8953261/17080662/81bdd7f2-50f4-11e6-8100-5254bc165f37.png)
+
