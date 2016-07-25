@@ -1,0 +1,127 @@
+# How to Authenticate Using Google
+
+- Using your PlayBall MVC application in which you used the default Individual User Accounts Authentication, go to your web application’s properties dialog by:
+
+### Click on Project | Properites
+### Click on the Web item
+
+![webplayball](https://cloud.githubusercontent.com/assets/8953261/17120974/5980c516-528d-11e6-8483-af7675da85fb.png)
+
+### Copy the Project Url
+
+![projecturl](https://cloud.githubusercontent.com/assets/8953261/17120983/68a0f2aa-528d-11e6-8c22-38a38f785829.png)
+
+
+- Create a new project in the Google Developer’s Portal
+- Go to https://console.developers.google.com
+- NOTE: If you are prompted to sign in through gmail, do so!
+
+### Create a new project by clicking on the Create Project button 
+
+![createproject](https://cloud.githubusercontent.com/assets/8953261/17120991/7c4e949c-528d-11e6-8d99-ea8ba2dd601a.png)
+
+### Enter the project name My new IS project and click on the Create button
+
+![projectname](https://cloud.githubusercontent.com/assets/8953261/17121001/92244d52-528d-11e6-80d9-bb880b0cfb2d.png)
+
+- NOTE: This can be any name that will help you remember what MVC project on which you are enabling Google OAuth
+
+- Your project will be created!
+- In order for Google OAuth to work, you must enable the Google + API
+
+### Click on the Google Developers Console Menu
+
+![googledevconsole](https://cloud.githubusercontent.com/assets/8953261/17121020/acf1e518-528d-11e6-9250-c138989b4414.png)
+
+### Click on the API Manager item
+
+![apimanager](https://cloud.githubusercontent.com/assets/8953261/17121028/b87b69f4-528d-11e6-8fc9-0e5fe0ff8e0c.png)
+
+### Click on the Google+ API
+
+![googleapis](https://cloud.githubusercontent.com/assets/8953261/17121044/e7dd86c8-528d-11e6-93ed-295206fb5f39.png)
+
+### Click on the Enable API button
+
+![enableapi](https://cloud.githubusercontent.com/assets/8953261/17121047/f3a8ddd6-528d-11e6-9c85-4b9c6945023a.png)
+
+- The Google+ API will be enabled
+
+### Click on Credentials
+
+![credentials](https://cloud.githubusercontent.com/assets/8953261/17121057/0367c174-528e-11e6-8577-46b3f9a17475.png)
+
+### Click on the OAuth consent Screen item
+
+![oauthconsent](https://cloud.githubusercontent.com/assets/8953261/17121076/230c9284-528e-11e6-81dd-564e9ee516bf.png)
+
+### Confirm your email address and type in any name in the product name shown to users box
+### Click on the Save button
+
+![mynewisproejct](https://cloud.githubusercontent.com/assets/8953261/17121143/b85833de-528e-11e6-9801-0b96b1a5ed7d.png)
+
+### Click on the Add Credentials button
+
+![addcredentials](https://cloud.githubusercontent.com/assets/8953261/17121152/cf992fa8-528e-11e6-987a-45fc23ac0b1c.png)
+
+### Click on the OAuth 2.0 entry
+
+![clientidcreds](https://cloud.githubusercontent.com/assets/8953261/17121168/df6ad38c-528e-11e6-881d-972e41d6c0ec.png)
+
+### Click on the Web application radio button and paste in the URL you copied from MVC into the Authorized redirect URLs box
+### Click on the Create button
+
+![credentialcreate](https://cloud.githubusercontent.com/assets/8953261/17121186/01c16450-528f-11e6-9b8e-314ee9d3a39b.png)
+
+- A window will be displayed showing the client ID and the client secret
+### Copy both of these items since you will need them later on in Visual Studio to configure your MVC application to work with Google OAuth
+
+![oauthclient](https://cloud.githubusercontent.com/assets/8953261/17121189/19780e8c-528f-11e6-803b-a2ba61b5e305.png)
+
+### Click on the OK button
+- Now let’s go back to the MVC project created in Visual Studio and enable Google OAuth services
+
+### Open the Startup.Auth file located in the App_Start folder
+
+![startupauth](https://cloud.githubusercontent.com/assets/8953261/17121207/378b0b36-528f-11e6-8577-894c4460a16e.png)
+
+- NOTE: If you are modifying your CheckPoint #5 you will need to remove the statements that commented out all of the code within this method
+
+```csharp
+public void ConfigureAuth(IAppBuilder app)
+{ /*  (REMOVE THE MULTILINE COMMENT SYMBOLS)
+```
+        
+### Scroll down in the file and uncomment the statements working with Google Authentication
+
+![usegoogleauthentication](https://cloud.githubusercontent.com/assets/8953261/17121215/47274104-528f-11e6-8ce4-64709d27a259.png)
+
+### Paste in your Google ClientID and ClientSecret you copied earlier
+
+![clientidsecret](https://cloud.githubusercontent.com/assets/8953261/17121224/5d79fc30-528f-11e6-9b0c-1e04c7d586d8.png)
+
+### Open your Web.config file
+### Remove the Authentication statements you placed in CheckPoint #5 and replace them with the following:
+
+![systemweb](https://cloud.githubusercontent.com/assets/8953261/17121247/889f4438-528f-11e6-8d3f-ac3880946f77.png)
+
+- NOTE: This will turn off our previously created customized login and default back to the MVC created login
+### Save and Build the project
+### Run the project and test the Google Authentication
+- NOTE: Remember that it was the Home Controller and Index method that was authorized
+- NOTE: This will display the Login window generated by Visual Studio MVC
+### Click on the Google Button
+
+![googlebutton](https://cloud.githubusercontent.com/assets/8953261/17121251/9bc73fac-528f-11e6-9534-80f043d17300.png)
+
+- You should be redirected to the Google log in window
+### Enter your credentials and click on the Sign in Button
+
+![signin](https://cloud.githubusercontent.com/assets/8953261/17121269/bc38bfe0-528f-11e6-94e3-b3da6ad468d2.png)
+
+- You will be directed to a page allowing google to work with your project
+### Click on the Allow button
+
+![allow](https://cloud.githubusercontent.com/assets/8953261/17121276/c851a7d8-528f-11e6-916e-b5cbb47e248d.png)
+
+- NOTE: You will be redirected back to your project 
