@@ -2,63 +2,93 @@
 
 ## Program Structure
 
-##### Java
-
-```java
+<table>
+  <thead>
+    <tr>
+      <th>Java</th>
+      <th>C#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <pre lang="java">
 package hello;
-
 
 public class HelloWorld {
   public static void main(String[] args) {
     String name =  "Java";
-    
+
     System.out.println("Hello, " + name + "!");
   }
 }
-```
-
-<h4>C#</h4>
-
-```csharp
+        </pre>
+      </td>
+      <td>
+        <pre lang="csharp">
 using System;
-
 
 namespace Hello {
   public class HelloWorld {
     public static void Main(string[] args) {
       string name = "C#";
-    
+
       Console.WriteLine("Hello, " + name + "!");
     }
   }
 }
-```
+        </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Comments
 
-#### Java
-```java
+<table>
+  <thead>
+    <tr>
+      <th>Java</th>
+      <th>C#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <pre lang="java">
 // Single line
 /* Multiple
-   line */
+    line */
 /** Javadoc documentation comments */
-
-```
-
-<h4>C#</h4>
-```csharp
+        </pre>
+      </td>
+      <td>
+        <pre lang="csharp">
 // Single line
 /* Multiple
-   line */
+    line */
 /// XML comments on a single line
-/** XML comments on multiple lines */
-```
+/** XML comments on
+      multiple lines */
+        </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Data Types
 
-#### Java
-
-```java
+<table>
+  <thead>
+    <tr>
+      <th>Java</th>
+      <th>C#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <pre lang="java">
 // Primitive Types
 boolean
 byte
@@ -82,12 +112,10 @@ x = Integer.parseInt(y); // x is 456
 // double to int
 double z = 3.5;
 x = (int)z; // x is 3 (truncates decimal)
-```
-
-<h4>C#</h4>
-
-```csharp
-
+        </pre>
+      </td>
+      <td>
+        <pre lang="csharp">
 // Value Types
 bool
 byte, sbyte
@@ -102,150 +130,189 @@ arrays, classes
 
 // Conversions
 
-// int to string 
-int x = 123; 
+// int to string
+int x = 123;
 String y = x.ToString();  // y is "123"
 
 // string to int
-y = "456"; 
+y = "456";
 x = int.Parse(y);   // or x = Convert.ToInt32(y);
 
 // double to int
-double z = 3.5; 
+double z = 3.5;
 x = (int) z;   // x is 3  (truncates decimal)
-```
+        </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 
 ## Constants
 
-#### Java
-
-```java
-// May be initialized in a constructor 
+<table>
+  <thead>
+    <tr>
+      <th>Java</th>
+      <th>C#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <pre lang="java">
+// May be initialized in a constructor
 final double PI = 3.14;
-```
-
-<h4>C#</h4>
-
-```csharp
+        </pre>
+      </td>
+      <td>
+        <pre lang="csharp">
 const double PI = 3.14;
-
-```
+        </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Operators
 
-#### Java
-
-```java
+<table>
+  <thead>
+    <tr>
+      <th>Java</th>
+      <th>C#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <pre lang="java">
 // Comparison
 ==  <  >  <=  >=  !=
 
 // Arithmetic
 +  -  *  /
-%  // (mod)
-/  // (integer division if both operands are ints)
+%  // mod
+/  // integer division if both operands are ints
 Math.Pow(x, y)
 
 // Assignment
-=  +=  -=  *=  /=   %=   ^=   ++  --
+=  +=  -=  *=  /=  %=  ^=  ++  --
 
 // Logical
-&&  ||  &  |   ^   !
-
-// Note: && and || perform short-circuit logical evaluations
+&&  ||  &  |  ^  !  // Note: && and || perform short-circuit evaluations
 
 // String Concatenation
 +
-```
-
-<h4>C#</h4>
-
-```csharp
+        </pre>
+      </td>
+      <td>
+        <pre lang="csharp">
 // Comparison
 ==  <  >  <=  >=  !=
 
 // Arithmetic
 +  -  *  /
-%  // (mod)
-/  // (integer division if both operands are ints)
+%  // mod
+/  // integer division if both operands are ints
 Math.Pow(x, y)
 
 // Assignment
 =  +=  -=  *=  /=   %=  ^=  ++  --
 
 // Logical
-&&  ||  &  |   ^   !
+&&  ||  &  |   ^   !  //Note: && and || perform short-circuit logical evaluations
 
-//Note: && and || perform short-circuit logical evaluations
 // String Concatenation
 +
-```
+        </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 
 ## Choices
 
 #### Java
 
-```java
+
+<table>
+  <thead>
+    <tr>
+      <th>Java</th>
+      <th>C#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <pre lang="java">
 greeting = age < 20 ? "What's up?" : "Hello";
 
-if (x < y) 
+if (x < y)
   System.out.println("greater");
-  
+
 if (x != 100) {    
-  x *= 5; 
-  y *= 2; 
-} else 
+  x *= 5;
+  y *= 2;
+} else
   z *= 6;
-  
+
 int selection = 2;
 switch (selection) {      
   case 1: x++;   // Falls through to next case if no break
-  case 2: y++;   break; 
-  case 3: z++;   break; 
+  case 2: y++;   break;
+  case 3: z++;   break;
   default: other++;
 }
-```
-
-<h4>C#</h4>
-
-```csharp
+        </pre>
+      </td>
+      <td>
+        <pre lang="csharp">
 greeting = age < 20 ? "What's up?" : "Hello";
 
 if (x < y)  
   Console.WriteLine("greater");
-  
+
 if (x != 100) {    
-  x *= 5; 
-  y *= 2; 
-} else 
+  x *= 5;
+  y *= 2;
+} else
   z *= 6;
 
 string color = "red";
 switch (color) {                        
   case "red":    r++;     break; // break is mandatory; no fall-through
-  case "blue":   b++;     break; 
-  case "green":  g++;     break; 
+  case "blue":   b++;     break;
+  case "green":  g++;     break;
   default:       other++; break; // break necessary on default
 }
-```
+        </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 
 ## Loops
 
 #### Java
 
 ```java
-while (i < 10) 
+while (i < 10)
   i++;
 
-for (i = 2; i <= 10; i += 2) 
+for (i = 2; i <= 10; i += 2)
   System.out.println(i);
-  
-do 
-  i++; 
+
+do
+  i++;
 while (i < 10);
 
 for (int i : numArray)  // foreach construct  
   sum += i;
-  
+
 // for loop can be used to iterate through any Collection
 import java.util.ArrayList;
 
@@ -261,20 +328,20 @@ for (Object o : list)
 <h4>C#</h4>
 
 ```csharp
-while (i < 10) 
+while (i < 10)
   i++;
 
-for (i = 2; i <= 10; i += 2) 
+for (i = 2; i <= 10; i += 2)
   Console.WriteLine(i);
-  
-do 
-  i++; 
+
+do
+  i++;
 while (i < 10);
 
 foreach (int i in numArray)  
   sum += i;
-  
-// foreach can be used to iterate through any collection 
+
+// foreach can be used to iterate through any collection
 using System.Collections;
 
 ArrayList list = new ArrayList();
@@ -321,22 +388,22 @@ twoD[2,0] = 4.5f;
 #### Java
 ```java
 // Return single value
-int Add(int x, int y) { 
-   return x + y; 
+int Add(int x, int y) {
+   return x + y;
 }
 int sum = Add(2, 3);
 
 // Return no value
-void PrintSum(int x, int y) { 
-   System.out.println(x + y); 
+void PrintSum(int x, int y) {
+   System.out.println(x + y);
 }
 PrintSum(2, 3);
 
 // Primitive types and references are always passed by value
 void TestFunc(int x, Point p) {
-   x++; 
+   x++;
    p.x++;       // Modifying property of the object
-   p = null;    // Remove local reference to object 
+   p = null;    // Remove local reference to object
 }
 ```
 
@@ -344,22 +411,22 @@ void TestFunc(int x, Point p) {
 
 ```csharp
 // Return single value
-int Add(int x, int y) { 
-   return x + y; 
+int Add(int x, int y) {
+   return x + y;
 }
 int sum = Add(2, 3);
 
 // Return no value
-void PrintSum(int x, int y) { 
-   Console.WriteLine(x + y); 
+void PrintSum(int x, int y) {
+   Console.WriteLine(x + y);
 }
-PrintSum(2, 3); 
+PrintSum(2, 3);
 
 // Pass by value (default), in/out-reference (ref)                
-void TestFunc(int x, ref int y,  ref Point p2) { 
-   x++; 
+void TestFunc(int x, ref int y,  ref Point p2) {
+   x++;
    p1.x++;       // Modifying property of the object      
-   p1 = null;    // Remove local reference to object 
+   p1 = null;    // Remove local reference to object
 }
 ```
 
@@ -369,11 +436,11 @@ void TestFunc(int x, ref int y,  ref Point p2) {
 
 ```java
 // String concatenation
-String school = "Harding "; 
+String school = "Harding ";
 school = school + "University";   // school is "Harding University"
 
 // String comparison
-String mascot = "Bisons"; 
+String mascot = "Bisons";
 if (mascot == "Bisons")    // Not the correct comparison
 if (mascot.equals("Bisons"))   // true
 if (mascot.equalsIgnoreCase("BISONS"))   // true
@@ -384,22 +451,22 @@ System.out.println(mascot.substring(2, 5));   // Prints "son"
 java.util.Calendar c = new java.util.GregorianCalendar(1973, 10, 12);
 String s = String.format("My birthday: %1$tb %1$te, %1$tY", c);
 
-// Mutable string 
-StringBuffer buffer = new StringBuffer("two "); 
-buffer.append("three "); 
-buffer.insert(0, "one "); 
-buffer.replace(4, 7, "TWO"); 
+// Mutable string
+StringBuffer buffer = new StringBuffer("two ");
+buffer.append("three ");
+buffer.insert(0, "one ");
+buffer.replace(4, 7, "TWO");
 System.out.println(buffer);     // Prints "one TWO three"
 ```
 
 <h4>C#</h4>
 ```csharp
 // String concatenation
-string school = "Harding "; 
+string school = "Harding ";
 school = school + "University";   // school is "Harding University"
 
 // String comparison
-string mascot = "Bisons"; 
+string mascot = "Bisons";
 if (mascot == "Bisons")    // true
 if (mascot.Equals("Bisons"))   // true
 if (mascot.ToUpper().Equals("BISONS"))   // true
@@ -410,11 +477,11 @@ Console.WriteLine(mascot.Substring(2, 3));    // Prints "son"
 DateTime dt = new DateTime(1973, 10, 12);
 string s = "My birthday: " + dt.ToString("MMM dd, yyyy");
 
-// Mutable string 
-System.Text.StringBuilder buffer = new System.Text.StringBuilder("two "); 
-buffer.Append("three "); 
-buffer.Insert(0, "one "); 
-buffer.Replace("two", "TWO"); 
+// Mutable string
+System.Text.StringBuilder buffer = new System.Text.StringBuilder("two ");
+buffer.Append("three ");
+buffer.Insert(0, "one ");
+buffer.Replace("two", "TWO");
 Console.WriteLine(buffer);     // Prints "one TWO three"
 ```
 
@@ -424,13 +491,13 @@ Console.WriteLine(buffer);     // Prints "one TWO three"
 
 ```java
 // Must be in a method that is declared to throw this exception
-Exception ex = new Exception("Something is really wrong."); 
+Exception ex = new Exception("Something is really wrong.");
 throw ex;  
 try {
-  y = 0; 
+  y = 0;
   x = 10 / y;
 } catch (Exception ex) {
-  System.out.println(ex.getMessage()); 
+  System.out.println(ex.getMessage());
 } finally {
   // Code that always gets executed
 }
@@ -439,14 +506,14 @@ try {
 <h4>C#</h4>
 
 ```csharp
-Exception up = new Exception("Something is really wrong."); 
+Exception up = new Exception("Something is really wrong.");
 throw up;  // ha ha
 
 try {
-  y = 0; 
+  y = 0;
   x = 10 / y;
 } catch (Exception ex) {      // Variable "ex" is optional
-  Console.WriteLine(ex.Message); 
+  Console.WriteLine(ex.Message);
 } finally {
   // Code that always gets executed
 }
@@ -463,7 +530,7 @@ package harding.compsci.graphics;
 // Import single class
 import harding.compsci.graphics.Rectangle;
 // Import all classes
-import harding.compsci.graphics.*; 
+import harding.compsci.graphics.*;
 ```
 
 <h4>C#</h4>
@@ -483,7 +550,7 @@ using Harding.Compsci.Graphics;
 #### Java
 
 ```java
-// Accessibility keywords 
+// Accessibility keywords
 public
 private
 protected
@@ -498,7 +565,7 @@ class FootballGame extends Competition {
 <h4>C#</h4>
 
 ```csharp
-// Accessibility keywords 
+// Accessibility keywords
 public
 private
 internal
@@ -517,13 +584,13 @@ class FootballGame : Competition {
 #### Java
 
 ```java
-class SuperHero { 
+class SuperHero {
   private int mPowerLevel;
-  public SuperHero() { 
-    mPowerLevel = 0; 
+  public SuperHero() {
+    mPowerLevel = 0;
   }
-  public SuperHero(int powerLevel) { 
-    this.mPowerLevel= powerLevel; 
+  public SuperHero(int powerLevel) {
+    this.mPowerLevel= powerLevel;
   }
 }
 ```
@@ -539,7 +606,7 @@ class SuperHero {
   }
 
   public SuperHero(int powerLevel) {
-    this.mPowerLevel= powerLevel; 
+    this.mPowerLevel= powerLevel;
   }
 }
 ```
@@ -550,48 +617,48 @@ class SuperHero {
 
 ```java
 SuperHero hero = new SuperHero();
-hero.setName("SpamMan"); 
-hero.setPowerLevel(3); 
+hero.setName("SpamMan");
+hero.setPowerLevel(3);
 
 hero.Defend("Laura Jones");
 SuperHero.Rest();  // Calling static method
-SuperHero hero2 = hero;   // Both refer to same object 
-hero2.setName("WormWoman"); 
-System.out.println(hero.getName());  // Prints WormWoman 
+SuperHero hero2 = hero;   // Both refer to same object
+hero2.setName("WormWoman");
+System.out.println(hero.getName());  // Prints WormWoman
 
 hero = null;   // Free the object
 
 if (hero == null)
   hero = new SuperHero();
-Object obj = new SuperHero(); 
-System.out.println("object's type: " + obj.getClass().toString()); 
-if (obj instanceof SuperHero) 
+Object obj = new SuperHero();
+System.out.println("object's type: " + obj.getClass().toString());
+if (obj instanceof SuperHero)
   System.out.println("Is a SuperHero object.");
 ```
 
 <h4>C#</h4>
 
 ```csharp
-SuperHero hero = new SuperHero(); 
+SuperHero hero = new SuperHero();
 
-hero.Name = "SpamMan"; 
+hero.Name = "SpamMan";
 hero.PowerLevel = 3;
 
 hero.Defend("Laura Jones");
 SuperHero.Rest();   // Calling static method
 
-SuperHero hero2 = hero;   // Both refer to same object 
-hero2.Name = "WormWoman"; 
+SuperHero hero2 = hero;   // Both refer to same object
+hero2.Name = "WormWoman";
 Console.WriteLine(hero.Name);   // Prints WormWoman
 
 hero = null ;   // Free the object
 
 if (hero == null)
   hero = new SuperHero();
-  
-Object obj = new SuperHero(); 
-Console.WriteLine("object's type: " + obj.GetType().ToString()); 
-if (obj is SuperHero) 
+
+Object obj = new SuperHero();
+Console.WriteLine("object's type: " + obj.GetType().ToString());
+if (obj is SuperHero)
   Console.WriteLine("Is a SuperHero object.");
 ```
 
@@ -601,12 +668,12 @@ if (obj is SuperHero)
 ```java
 private int mSize;
 
-public int getSize() { return mSize; } 
+public int getSize() { return mSize; }
 public void setSize(int value) {
-  if (value < 0) 
-    mSize = 0; 
-  else 
-    mSize = value; 
+  if (value < 0)
+    mSize = 0;
+  else
+    mSize = value;
 }
 
 int s = shoe.getSize();
@@ -618,15 +685,42 @@ shoe.setSize(s+1);
 ```csharp
 private int mSize;
 
-public int Size { 
-  get { return mSize; } 
-  set { 
-    if (value < 0) 
-      mSize = 0; 
-    else 
-      mSize = value; 
-  } 
+public int Size {
+  get { return mSize; }
+  set {
+    if (value < 0)
+      mSize = 0;
+    else
+      mSize = value;
+  }
 }
 
 shoe.Size++;
 ```
+
+
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Java</th>
+      <th>C#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <pre lang="java">
+
+        </pre>
+      </td>
+      <td>
+        <pre lang="csharp">
+
+        </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
