@@ -2,50 +2,44 @@
 
 ## Contents
 
-1. What are Threads
-2. Threads in Action
-3. Life Cycle of Threads
-4. Thread Code
-5. Other Resources
+1. [What are Threads](#what-are-threads)
+2. [Threads in Action](#threads-in-action)
+3. [Life Cycle of Threads](#life-cycle-of-threads)
+4. [Thread Code](#thread-code)
+5. [Hyper-threading](#hyper-threading)
+6. [Other Resources](#other-resources)
 
 
 ## What are Threads?
 
-- Every application uses at least one thread
-- A thread is a process moving through time
-- They can improve performance but at the same time, misused, can hinder performance
-- They should be used to separate computations to separate logical processors
-- In a GUI C# app, the UI thread is created automatically and used by the application when executed
-- Attempts to access form controls from threads other than the UI thread will cause a cross-thread exception
-- All of the UI operations are queued in that thread
-- Every command executed in the Main method is executed in the primary or UI thread and this thread ends when Main ends
-- Multi-threading is the use of more than one thread and can help increase responsiveness but also increase the chance for a deadlock
-- Thread execution is scheduled by the operating system
-- There is no guarantee that multiple threads are split into multiple processors
-- In one system with a single processor, multiple threads get to take a "turn"
-- On a multi processor system, it is hoped that the operating system assigns different threads to different processors
-- However, multi-processing has a downside of complexity (scheduling, sharing of resources, timing, etc.)
-- The System.Threading namespace provides different thread types (for example, a Timer object is really a thread)
+A _thread_ is a process moving through time. Threads supply the hardware with information; think of it as the 'road' by which the information gets into the CPU core. Every application uses at least one thread. Used correctly, threads can improve performance by separating computations across multiple logical processors. Used incorrectly, however, they can hinder performance.
+
+In a GUI C# application, the UI thread is created automatically and is used by the application when executed. Attempts to access form controls from threads other than the UI thread will cause a cross-thread exception; all of the UI operations are queued in that thread. Every command executed in the `Main` method is executed in the primary or UI thread which ends when `Main` ends.
+
+_Multi-threading_ is the use of more than one thread. While multi-threading helps increase responsiveness, it also increases the chance for a deadlock. Thread execution is a low-level task that is schedule by the operating systems. There is no guarantee that multiple threads will run across multiple processors; in systems with a single processor, multiple threads take turns running. On multi-processor systems, it is hoped that the operating system assigns different threads to different processors. Multi-processing has a downside of complexity (scheduling, sharing of resources, timing, etc.).
+
+In C#, `System.Threading` provides different thread types; e.g. a `Timer` object is really a thread.
 
 
 ## Using Threads
 
-1. Include the `System.Threading` namespace
+1. Include `System.Threading`
 2. Create your threads
 3. Start the threads
 4. Join the threads
 
-  ```csharp
-  {
-    thread.start();
-    
-    // ... stuff you want to do while the other thread is busy doing its own thing concurrently
-    
-    thread.join();
-    
-    // ... you won't get here until thread has terminated.
-  } 
-  ```
+```csharp
+{
+  thread.start();
+
+  // ... stuff you want to do while the other thread is busy doing its own thing concurrently
+
+  thread.join();
+
+  // ... you won't get here until thread has terminated.
+}
+```
+
 5. Write the methods called by the Thread constructor and are executed during the running of the thread
 
 
@@ -91,19 +85,20 @@ static void thread1Starter() {
 
 ## Using Multi-Threads
 
-- Do not use them just because they are cool!
-- Do not use them to make things “faster” until you have proven that a single thread implementation is slow
-- If not done correctly, multi-threading can cause problems (app freezes, resources exhaust, etc…) which makes it hard to debug
+You **MAY** want to multi-thread if...
+* a particular piece of code takes a long time to complete
+* you can run code parallel
+* you are waiting a long time for File I/O to complete or respond
+
+You may **NOT** want to multi-thread if...
+* you are using them just because they sound cool
+* you haven't proven that a single threaded implementation is slow
+* you don't understand them (can cause app freezes, resource exhaustion, etc, that are hard to debug)
 
 
-- You MAY want to multi-thread if a particular piece of code takes a long time to complete
-- You MAY want to multi-thread if you can run code parallel
-- You MAY want to multi-thread if you are waiting a long time for File I/O to complete or respond
+## Hyper-threading
 
-
-- Core = hardware. Correct.
-- Thread = how the hardware is supplied with information. Think of it as the 'road' by which the information gets into the CPU core. 
-- Some processors, like the i7-2600K, have hyper-threading. This is where each core can take 2 threads. In layman's terms, although the CPU has 4 physical cores, it allows the CPU to act as if it had 8 cores. Generally only useful for high-intensity program that do modelling or video-editing work. Cores don’t share memory because they have their own dedicated memory 1 core 1 thread, so the processing time is still faster than the 4cores with 4 threads, than the dual cores with 4 threads.
+Some processors, like the i7-2600K, have hyper-threading. This is where each core can take 2 threads. In layman's terms, although the CPU has 4 physical cores, it allows the CPU to act as if it had 8 cores. Generally only useful for high-intensity program that do modelling or video-editing work. Cores don’t share memory because they have their own dedicated memory 1 core 1 thread, so the processing time is still faster than the 4cores with 4 threads, than the dual cores with 4 threads.
 
 
 ## Other Resources
@@ -112,10 +107,3 @@ static void thread1Starter() {
 - http://www.tutorialspoint.com/csharp/csharp_multithreading.htm
 - http://www.dotnetperls.com/thread-join
 - https://msdn.microsoft.com/en-us/library/5xt1dysy(v=vs.80).aspx
-
-
-
-
-
-
-
