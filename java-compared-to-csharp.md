@@ -234,9 +234,6 @@ Math.Pow(x, y)
 
 ## Choices
 
-#### Java
-
-
 <table>
   <thead>
     <tr>
