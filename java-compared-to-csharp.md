@@ -297,43 +297,53 @@ switch (color) {
 
 ## Loops
 
-#### Java
-
-```java
+<table>
+  <thead>
+    <tr>
+      <th>Java</th>
+      <th>C#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <pre lang="java">
 while (i < 10)
   i++;
 
-for (i = 2; i <= 10; i += 2)
+for (i = 2; i <= 10; i + 2)
   System.out.println(i);
 
+int i = 0;
 do
-  i++;
+  i++
 while (i < 10);
 
-for (int i : numArray)  // foreach construct  
-  sum += i;
+for (int i : numArray) // foreach construct
+  sum += 1;
 
-// for loop can be used to iterate through any Collection
+// for loop can be used to iterate through any collection
 import java.util.ArrayList;
 
 ArrayList<Object> list = new ArrayList<Object>();
-list.add(10);    // boxing converts to instance of Integer
+list.add(10);
 list.add("Bisons");
-list.add(2.3);   // boxing converts to instance of Double
+list.add(2.3);
 
-for (Object o : list)
+for (Object o : list) {
   System.out.println(o);
-```
-
-<h4>C#</h4>
-
-```csharp
+}
+        </pre>
+      </td>
+      <td>
+        <pre lang="csharp">
 while (i < 10)
   i++;
 
-for (i = 2; i <= 10; i += 2)
+for (i = 2; i <= 10; i + 2)
   Console.WriteLine(i);
 
+int i = 0;
 do
   i++;
 while (i < 10);
@@ -351,65 +361,96 @@ list.Add(2.3);
 
 foreach (Object o in list)
   Console.WriteLine(o);
-```
+        </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Arrays
 
-#### Java
-```java
-int nums[] = {1, 2, 3}; // or   int[] nums = {1, 2, 3};
+<table>
+  <thead>
+    <tr>
+      <th>Java</th>
+      <th>C#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <pre lang="java">
+int nums[] = {1, 2, 3} // or int[] nums = {1, 2, 3};
 
-for (int i = 0; i < nums.length; i++)
+for (int i = 0; i < nums.length; i++) {
   System.out.println(nums[i]);
+}
 
 String names[] = new String[5];
 names[0] = "David";
 
+int rows = 10;
+int cols = 10;
 float twoD[][] = new float[rows][cols];
 twoD[2][0] = 4.5;
-```
-
-<h4>C#</h4>
-```csharp
+        </pre>
+      </td>
+      <td>
+        <pre lang="csharp">
 int[] nums = {1, 2, 3};
 
-for (int i = 0; i < nums.Length; i++)
+for (int i = 0; i < nums.Length; i++) {
   Console.WriteLine(nums[i]);
+}
 
 string[] names = new string[5];
 names[0] = "David";
 
+int rows = 10;
+int cols = 10;
 float[,] twoD = new float[rows, cols];
 twoD[2,0] = 4.5f;
-```
+        </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Functions
 
-#### Java
-```java
+<table>
+  <thead>
+    <tr>
+      <th>Java</th>
+      <th>C#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <pre lang="java">
 // Return single value
-int Add(int x, int y) {
+int add(int x, int y) {
    return x + y;
 }
-int sum = Add(2, 3);
+int sum = add(2, 3);
 
 // Return no value
-void PrintSum(int x, int y) {
+void printSum(int x, int y) {
    System.out.println(x + y);
 }
-PrintSum(2, 3);
+printSum(2, 3);
 
 // Primitive types and references are always passed by value
-void TestFunc(int x, Point p) {
+void testFunc(int x, Point p) {
    x++;
    p.x++;       // Modifying property of the object
    p = null;    // Remove local reference to object
 }
-```
-
-<h4>C#</h4>
-
-```csharp
+        </pre>
+      </td>
+      <td>
+        <pre lang="csharp">
 // Return single value
 int Add(int x, int y) {
    return x + y;
@@ -423,29 +464,41 @@ void PrintSum(int x, int y) {
 PrintSum(2, 3);
 
 // Pass by value (default), in/out-reference (ref)                
-void TestFunc(int x, ref int y,  ref Point p2) {
+void TestFunc(int x, ref int y, ref Point p1) {
    x++;
    p1.x++;       // Modifying property of the object      
    p1 = null;    // Remove local reference to object
 }
-```
+        </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Strings
 
-#### Java
-
-```java
+<table>
+  <thead>
+    <tr>
+      <th>Java</th>
+      <th>C#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <pre lang="java">
 // String concatenation
 String school = "Harding ";
 school = school + "University";   // school is "Harding University"
 
 // String comparison
 String mascot = "Bisons";
-if (mascot == "Bisons")    // Not the correct comparison
-if (mascot.equals("Bisons"))   // true
-if (mascot.equalsIgnoreCase("BISONS"))   // true
-if (mascot.compareTo("Bisons") == 0)   // true
-System.out.println(mascot.substring(2, 5));   // Prints "son"
+if (mascot == "Bisons")                      // Not the correct comparison
+if (mascot.equals("Bisons"))                 // true
+if (mascot.equalsIgnoreCase("BISONS"))       // true
+if (mascot.compareTo("Bisons") == 0)         // true
+System.out.println(mascot.substring(2, 5));  // Prints "son"
 
 // My birthday: Oct 12, 1973
 java.util.Calendar c = new java.util.GregorianCalendar(1973, 10, 12);
@@ -457,21 +510,21 @@ buffer.append("three ");
 buffer.insert(0, "one ");
 buffer.replace(4, 7, "TWO");
 System.out.println(buffer);     // Prints "one TWO three"
-```
-
-<h4>C#</h4>
-```csharp
+        </pre>
+      </td>
+      <td>
+        <pre lang="csharp">
 // String concatenation
 string school = "Harding ";
 school = school + "University";   // school is "Harding University"
 
 // String comparison
 string mascot = "Bisons";
-if (mascot == "Bisons")    // true
-if (mascot.Equals("Bisons"))   // true
-if (mascot.ToUpper().Equals("BISONS"))   // true
-if (mascot.CompareTo("Bisons") == 0)    // true
-Console.WriteLine(mascot.Substring(2, 3));    // Prints "son"
+if (mascot == "Bisons")                     // true
+if (mascot.Equals("Bisons"))                // true
+if (mascot.ToUpper().Equals("BISONS"))      // true
+if (mascot.CompareTo("Bisons") == 0)        // true
+Console.WriteLine(mascot.Substring(2, 3));  // Prints "son"
 
 // My birthday: Oct 12, 1973
 DateTime dt = new DateTime(1973, 10, 12);
@@ -483,16 +536,30 @@ buffer.Append("three ");
 buffer.Insert(0, "one ");
 buffer.Replace("two", "TWO");
 Console.WriteLine(buffer);     // Prints "one TWO three"
-```
+        </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 
 ## Exception Handling
 
-#### Java
-
-```java
+<table>
+  <thead>
+    <tr>
+      <th>Java</th>
+      <th>C#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <pre lang="java">
 // Must be in a method that is declared to throw this exception
 Exception ex = new Exception("Something is really wrong.");
 throw ex;  
+
 try {
   y = 0;
   x = 10 / y;
@@ -501,11 +568,10 @@ try {
 } finally {
   // Code that always gets executed
 }
-```
-
-<h4>C#</h4>
-
-```csharp
+        </pre>
+      </td>
+      <td>
+        <pre lang="csharp">
 Exception up = new Exception("Something is really wrong.");
 throw up;  // ha ha
 
@@ -517,13 +583,26 @@ try {
 } finally {
   // Code that always gets executed
 }
-```
+        </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 
 ## Namespaces
 
-#### Java
-
-```java
+<table>
+  <thead>
+    <tr>
+      <th>Java</th>
+      <th>C#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <pre lang="java">
 package harding.compsci.graphics;
 
 
@@ -531,11 +610,10 @@ package harding.compsci.graphics;
 import harding.compsci.graphics.Rectangle;
 // Import all classes
 import harding.compsci.graphics.*;
-```
-
-<h4>C#</h4>
-
-```csharp
+        </pre>
+      </td>
+      <td>
+        <pre lang="csharp">
 namespace Harding.Compsci.Graphics {
   ...
 }
@@ -543,13 +621,25 @@ namespace Harding.Compsci.Graphics {
 using Rectangle = Harding.CompSci.Graphics.Rectangle;
 // Import all class
 using Harding.Compsci.Graphics;
-```
+        </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Classes
 
-#### Java
-
-```java
+<table>
+  <thead>
+    <tr>
+      <th>Java</th>
+      <th>C#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <pre lang="java">
 // Accessibility keywords
 public
 private
@@ -560,11 +650,10 @@ static
 class FootballGame extends Competition {
   ...
 }
-```
-
-<h4>C#</h4>
-
-```csharp
+        </pre>
+      </td>
+      <td>
+        <pre lang="csharp">
 // Accessibility keywords
 public
 private
@@ -577,13 +666,25 @@ static
 class FootballGame : Competition {
   ...
 }
-```
+        </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Constructors
 
-#### Java
-
-```java
+<table>
+  <thead>
+    <tr>
+      <th>Java</th>
+      <th>C#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <pre lang="java">
 class SuperHero {
   private int mPowerLevel;
   public SuperHero() {
@@ -593,11 +694,10 @@ class SuperHero {
     this.mPowerLevel= powerLevel;
   }
 }
-```
-
-<h4>C#</h4>
-
-```csharp
+        </pre>
+      </td>
+      <td>
+        <pre lang="csharp">
 class SuperHero {
   private int mPowerLevel;
 
@@ -609,13 +709,25 @@ class SuperHero {
     this.mPowerLevel= powerLevel;
   }
 }
-```
+        </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Objects
 
-#### Java
-
-```java
+<table>
+  <thead>
+    <tr>
+      <th>Java</th>
+      <th>C#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <pre lang="java">
 SuperHero hero = new SuperHero();
 hero.setName("SpamMan");
 hero.setPowerLevel(3);
@@ -634,11 +746,10 @@ Object obj = new SuperHero();
 System.out.println("object's type: " + obj.getClass().toString());
 if (obj instanceof SuperHero)
   System.out.println("Is a SuperHero object.");
-```
-
-<h4>C#</h4>
-
-```csharp
+        </pre>
+      </td>
+      <td>
+        <pre lang="csharp">
 SuperHero hero = new SuperHero();
 
 hero.Name = "SpamMan";
@@ -660,12 +771,25 @@ Object obj = new SuperHero();
 Console.WriteLine("object's type: " + obj.GetType().ToString());
 if (obj is SuperHero)
   Console.WriteLine("Is a SuperHero object.");
-```
+        </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Properties
 
-#### Java
-```java
+<table>
+  <thead>
+    <tr>
+      <th>Java</th>
+      <th>C#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <pre lang="java">
 private int mSize;
 
 public int getSize() { return mSize; }
@@ -678,11 +802,10 @@ public void setSize(int value) {
 
 int s = shoe.getSize();
 shoe.setSize(s+1);
-```
-
-<h4>C#</h4>
-
-```csharp
+        </pre>
+      </td>
+      <td>
+        <pre lang="csharp">
 private int mSize;
 
 public int Size {
@@ -696,29 +819,6 @@ public int Size {
 }
 
 shoe.Size++;
-```
-
-
-
-
-
-<table>
-  <thead>
-    <tr>
-      <th>Java</th>
-      <th>C#</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <pre lang="java">
-
-        </pre>
-      </td>
-      <td>
-        <pre lang="csharp">
-
         </pre>
       </td>
     </tr>
