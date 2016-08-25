@@ -1,6 +1,6 @@
-# C# Console App
+# My First Console App
 
-The Console in ASP.NET represents 	a text based computer program (i.e. text terminal) such as a command line text operating system. Console applications still exist but for the most part, graphical user interface (GUI) applications are what users prefer.
+The Console in ASP.NET represents a text based computer program (i.e. text terminal) such as a command line text operating system. Console applications still exist but for the most part, graphical user interface (GUI) applications are what users prefer.
 
 Visual Studio .NET has the ability to create console and GUI applications.
 
@@ -11,7 +11,7 @@ This tutorial will show the very basics of a writing data to the console so the 
 - Select File | New | Project
 - Select Visual C# | Windows Desktop and choose Console Application (NOTE: Make sure the .NET Framework 4.5.1 is selected)
 - Make sure the Create directory for solution checkbox is checked
-- Name the Project `MyFirstConsole` and click on the OK Button
+- Name the Project `MyFirstConsoleApp` and click on the OK Button
 
   ![create-console-app](https://cloud.githubusercontent.com/assets/8953261/16710334/dd658374-45e7-11e6-8371-90bc7af5962f.png)
 
@@ -24,7 +24,7 @@ This tutorial will show the very basics of a writing data to the console so the 
   using System.Text;
   using System.Threading.Tasks;
   
-  namespace MyFirstConsole {
+  namespace MyFirstConsoleApp {
     class Program {
       static void Main(string[] args) {
         // declare a string variable and assign it a value
