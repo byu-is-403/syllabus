@@ -16,7 +16,7 @@
 12. Controllers and Data
 
 
-## .NET Entify Framework (EF)
+## .NET Entity Framework (EF)
 
 - NET Framework data-access technology is known as the Entity Framework (Also known as EF)
 - Supports a development paradigm called Code First
