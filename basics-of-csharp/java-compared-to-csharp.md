@@ -132,7 +132,7 @@ arrays, classes
 
 // int to string
 int x = 123;
-String y = x.ToString();  // y is "123"
+string y = x.ToString();  // y is "123"
 
 // string to int
 y = "456";
