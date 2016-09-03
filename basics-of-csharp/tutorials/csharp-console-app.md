@@ -17,37 +17,36 @@ This tutorial will show the very basics of a writing data to the console so the 
 
 - Type in the following code:
 
-  ```csharp
-  using System;
-  using System.Collections.Generic;
-  using System.Linq;
-  using System.Text;
-  using System.Threading.Tasks;
-  
-  namespace MyFirstConsoleApp {
-    class Program {
-      static void Main(string[] args) {
-        // declare a string variable and assign it a value
-        String sName = "Greg Anderson";
-        
-        // declare an integer variable
-        int iCount;
-        
-        // create a for loop that will execute as long as the variable iCount is < 3
-        for (iCount = 0; iCount < 3; iCount++) {
-          // write information to the console and then add a carriage return
-          Console.WriteLine(sName + " loves Fried SPAM!");
-          
-          // the WriteLine() prints the string to the console and wraps the cursor to the next line
-        }
-        
-        // wait for input from the keyboard
-        Console.ReadLine();
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MyFirstConsoleApp {
+  class Program {
+    static void Main(string[] args) {
+      // declare a string variable and assign it a value
+      String sName = "Greg Anderson";
+      
+      // declare an integer variable
+      int iCount;
+
+      // create a for loop that will execute as long as the variable iCount is < 3
+      for (iCount = 0; iCount < 3; iCount++) {
+        // write information to the console and then add a carriage return
+        Console.WriteLine(sName + " loves Fried SPAM!");
+
+        // the WriteLine() prints the string to the console and wraps the cursor to the next line
       }
+
+      // wait for input from the keyboard
+      Console.ReadLine();
     }
   }
-  
-  ```
+}
+```
 
 - Save the project and press `F5` to run it (or click the green arrow)
 
