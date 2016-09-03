@@ -1,18 +1,18 @@
 # Data Structures
 
 ## Contents
-1. What are Data Structures?
-2. C# Data Structures
-  - Array
-  - `ArrayList`
-  - List
-  - Linked list
-  - Stack
-  - Queue
-  - Dictionary
-  - Hash table
-  - Hash set
-3. Other Resources
+1. [What are Data Structures?](#what-are-data-structures)
+2. [C# Data Structures](#c-data-structures)
+  - [Array](#arrays)
+  - [`ArrayList`](#arraylist)
+  - [List](#list)
+  - [Linked list](#linked-list)
+  - [Stack](#stack)
+  - [Queue](#queue)
+  - [Dictionary](#dictionary)
+  - [Hash table](#hash-table)
+  - [Hash set](#hashset)
+3. [Other Resources](#other-resources)
 
 ## What are Data Structures?
 
