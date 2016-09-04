@@ -1,14 +1,18 @@
 # HTML Basics
 
 ## Contents
-- [Todo](#todo)
+- [What is a Web Page?](#what-is-a-web-page)
+- [HTML Elements](#html-elements)
+- [HTML Structure](#html-structure)
+- [Special Characters](#special-characters)
+- [More Information](#more-information)
 
 
 ### What is a Web Page?
 
 The Internet is based on a text-based request/response protocol called **HTTP** (Hyper Text Transfer Protocol). HTTP allows us to send text across the internet; **HTML** (Hyper Text Markup Language) is just a special kind of text that a computer uses to format web pages in a special way. When a computer receives text in a `.html` or `.htm` file, it knows to display it in a certain way.
 
-HTML files can be created in any text editor such as NotePad, NotePad++, Atom, SublimeText, Visual Studio, and many others.
+HTML files can be created in any text editor such as Atom, SublimeText, NotePad++, Visual Studio, and many others.
 
 
 ### HTML Elements
@@ -87,7 +91,7 @@ While many tags have attributes that perform special tasks, there are some attri
 * `class`, which allows you to label elements to be selected by CSS or JavaScript
 * `id`, which performs much like the `class` attribute except that ids must be unique on each page
 
-These will be covered further in the CSS Basics tutorial.
+These will be covered further in the [CSS Basics tutorial](https://github.com/byu-is-403/syllabus/blob/master/html-css-bootstrap/tutorials/css-basics.md).
 
 
 ### HTML structure

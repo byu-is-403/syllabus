@@ -1,0 +1,23 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  max-width: 1024px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 300;
+  letter-spacing: -3px;
+}
+
+.mission {
+  padding: 30px;
+  margin: 30px 0;
+  background: #EAEAEA;
+}
+
+img {
+  display: block;
+  margin: auto;
+  max-width: 75%;
+}
