@@ -39,7 +39,7 @@ public int differential
 public int points
 ```
 
-Each class should have a constructor that receives the `name` and `points` values as parameters and assigns them to the properties.
+The SoccerTeam class should have a constructor that receives the `name` and `points` values as parameters and assigns them to the properties.
 
 ## Project Tips
 
