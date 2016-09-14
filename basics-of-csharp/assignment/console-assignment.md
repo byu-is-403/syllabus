@@ -13,7 +13,7 @@ Draw a class diagram that represents a Soccer Tournament. You will need a Team p
 - [ ] Properly implements [Team and SoccerTeam classes](#create-team-and-soccerteam-classes) but you do NOT need to implement the Game class
 - [ ] Use exception handling to make sure that the number of teams they enter is a valid integer (try/catch within a while loop).
 - [ ] Adds comments to make code easier to understand
-- [ ] Upload the project here and also upload the zipped project to the Learning Suite assignment (include the class diagram in your upload in the main root directory for your project so TAs can easily find it) and then schedule a time with the TAs for them to grade this assignment
+- [ ] Upload the zipped project to the Learning Suite assignment (include the class diagram in your upload in the main root directory for your project so TAs can easily find it) and then schedule a time with the TAs for them to grade this assignment
 
 ![console-output](https://cloud.githubusercontent.com/assets/8953261/17834223/07e10282-66f3-11e6-8e1b-30ec4c018968.jpg)
 
