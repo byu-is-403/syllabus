@@ -59,7 +59,7 @@ public static int randomNumberInRange() {
 
 First, add the `randomName` and `randomNumberInRange` functions above to your program. Then, create a new queue of strings and a dictionary with `string` keys and `int` values.
 
-You need to add 100 customers to your queue using the `Enqueue` method. Remember you can use `randomName` to generate a random customer name.
+You need to add 100 customers to your queue using the `Enqueue` method. Remember you can use `randomName` to generate a random customer name. Note that the `randomName` function only contains 8 names, so there will be duplicates. That is fine! People always line up for seconds. :hamburger:
 
 Next, we need to _iterate_ over the customers in the queue. This can be done in a number of different ways:
 
