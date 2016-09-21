@@ -72,7 +72,7 @@ IEnumerator<string> MyQueueEnumerator = qMyQueue.GetEnumerator();
 
 while (MyQueueEnumerator.MoveNext())
 {
-  string value = myQueueEnumerator.Current;
+  string myValue = myQueueEnumerator.Current;
 }
 ```
 
