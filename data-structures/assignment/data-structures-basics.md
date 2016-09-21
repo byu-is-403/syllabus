@@ -68,11 +68,11 @@ Next, we need to _iterate_ over the customers in the queue. This can be done in 
 * Use an _enumerator_ like so:
 
 ```csharp
-IEnumerator MyQueueEnumerator = qMyQueue.GetEnumerator();
+IEnumerator<string> MyQueueEnumerator = qMyQueue.GetEnumerator();
 
 while (MyQueueEnumerator.MoveNext())
 {
-  ...
+  string value = myQueueEnumerator.Current;
 }
 ```
 
