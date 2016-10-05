@@ -25,12 +25,16 @@
   **NOTE:** Incoming requests are handled by controllers (usually inherited from System.Web.Mvc.Controller). Each public method in the controller is the action method and can be invoked from the web via a URL
   
 - Right click the Controllers folder and choose Add, Controller
+- Select MVC 5 Controller Empty and click Add
+
+  ![mvccontroller](https://cloud.githubusercontent.com/assets/6514931/19099857/62ed9a1c-8a77-11e6-8b82-dd926ff489e5.png)
+  
 - Set the name to be `HomeController`
   
   
   **NOTE:** All controllers should have the word Controller in their name
   
-  ![add-controller](https://cloud.githubusercontent.com/assets/8953261/16710852/f9e41e66-45fb-11e6-9c81-a7b2043d8d8c.png)
+  ![homecontroller](https://cloud.githubusercontent.com/assets/6514931/19099897/c3ebca64-8a77-11e6-8014-42a4813a5725.png)
   
   
   **NOTE:** The scaffolding options allows you to select templates with built-in common functionality. The default contents of the controller will be displayed
