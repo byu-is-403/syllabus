@@ -29,7 +29,7 @@
 
   ![mvccontroller](https://cloud.githubusercontent.com/assets/6514931/19099857/62ed9a1c-8a77-11e6-8b82-dd926ff489e5.png)
   
-- Set the name to be `HomeController`
+- Set the name to be `HomeController` and click Add
   
   
   **NOTE:** All controllers should have the word Controller in their name
