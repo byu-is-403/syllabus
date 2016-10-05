@@ -459,7 +459,8 @@
     public bool? WillAttend { get; set; }
   }
   ```
-  
+- You will also need to add 'using System.ComponentModel.DataAnnotations;' to this file in the Using area
+
 - Open the HomeController.cs Controller
 - Add the following code to the HttpPost attribute
 
