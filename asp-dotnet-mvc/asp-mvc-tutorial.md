@@ -7,8 +7,7 @@
 - Select ASP.NET MVC4 Web Application located under Templates/Visual C#/Web
 - Enter `FirstMVCSite` in the name edit area
 
-
-  ![new-project](https://cloud.githubusercontent.com/assets/8953261/16710838/88fd9dbc-45fb-11e6-9cd4-d2e16efa623d.png)
+  ![mvctutorial](https://cloud.githubusercontent.com/assets/6514931/19099172/122ff62a-8a71-11e6-897a-afcd29baa9c1.png)
   
 - Click on the OK button
 - Select Empty Template and leave everything else as is
