@@ -399,7 +399,7 @@
   
 
   
-  ![thank-you-view](https://cloud.githubusercontent.com/assets/8953261/16711026/41813d0a-4604-11e6-9a9f-db5eabd899d1.png)
+  ![thankyouview](https://cloud.githubusercontent.com/assets/6514931/19100421/f80e171c-8a7b-11e6-91ef-947ed44a6dc6.png)
 
   
   **NOTE: The ThankYou.cshtml file for the view will be created in the Home Controllers folder**
