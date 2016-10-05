@@ -12,7 +12,7 @@
 - Click on the OK button
 - Select Empty Template and leave everything else as is
 
-  ![project-template](https://cloud.githubusercontent.com/assets/8953261/16710842/a168e88e-45fb-11e6-91c0-3e5606eeef35.png)
+  ![2ndimage](https://cloud.githubusercontent.com/assets/6514931/19099226/9d0ccd54-8a71-11e6-9a38-4449dde0b9f5.png)
   
 - Click on the OK button
   
