@@ -265,7 +265,7 @@
   2. Dynamic (we haven’t talked about yet)
   3. Using a ViewBag
   
-    ![add-view](https://cloud.githubusercontent.com/assets/8953261/16710926/9dd83a4a-45ff-11e6-9a53-46add5989238.png)
+  ![rsvpform](https://cloud.githubusercontent.com/assets/6514931/19100322/143de63e-8a7b-11e6-82c8-ce8f1216d7fd.png)
 
     
     **NOTE: A new View will be created called RsvpForm and placed in the Views, Home folder**
