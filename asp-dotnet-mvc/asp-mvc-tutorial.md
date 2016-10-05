@@ -397,7 +397,7 @@
 - Create the new view ThankYou by Right-Clicking inside the overloaded HomeController ViewResult method and choosing Add View
 
   
-  **NOTE: Make sure you are selecting a Strongly Typed View so that we can specifically tie to a model**
+
   
   ![thank-you-view](https://cloud.githubusercontent.com/assets/8953261/16711026/41813d0a-4604-11e6-9a9f-db5eabd899d1.png)
 
