@@ -104,12 +104,12 @@
 - Name it `Home`
 
 
-![view-folder](https://cloud.githubusercontent.com/assets/8953261/16710875/2e259302-45fd-11e6-9ad7-f5eae93a727a.png)
+  ![view-folder](https://cloud.githubusercontent.com/assets/8953261/16710875/2e259302-45fd-11e6-9ad7-f5eae93a727a.png)
 
 - Right-click on the Home Folder and choose Add, View
-- Enter the name of `Index` and make sure to uncheck the Use a layout or master page
+- Enter the name of `Index` and make sure to uncheck the Use a layout page
 
-  ![add-view](https://cloud.githubusercontent.com/assets/8953261/16710878/4376ebe8-45fd-11e6-8d8d-2238e81419bb.png)
+  ![addview](https://cloud.githubusercontent.com/assets/6514931/19100014/8e8108e8-8a78-11e6-95de-e67cd770483c.png)
   
 - Click on the Add button
 
