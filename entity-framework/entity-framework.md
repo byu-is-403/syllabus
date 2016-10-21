@@ -42,7 +42,7 @@
   ```
 
 - The ID property becomes the primary key for the column and can either be named ID or classnameID 
-- This happens by default by the EF
+- This happens by default by the EF and you do not control it
 
 
 ### Navigational Properties
