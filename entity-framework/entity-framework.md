@@ -119,6 +119,7 @@ public class Course
 - You will want to create a model for each table you want to work with from the database
 - The DbContext class acts as the database
 - Within the DbContext class you define DbSets (representing the tables or entitites)
+- By default, the EF tries to pluralize the variable names you created using the DbSet class
 
 ```csharp
 public class SchoolContext : DbContext
@@ -147,7 +148,7 @@ public class SchoolContext : DbContext
   
   `modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();`
   
-- This statement in the OnModelCreating method prevents table names from being pluralized (student class becomes students class – big pain!) – Your choice to include the statement
+- This statement in the OnModelCreating method prevents the default table names from being pluralized (student class becomes students class – big pain!) – Your choice to include the statement
 
 
 ## Working with the Database
@@ -213,7 +214,6 @@ protected override void Seed(SchoolContext context)
 ```
 
 - The DbContext class "SchoolContext" handles the task of connecting to the database and mapping objects to database records. The connection string in the Web.config file specifies the name and type of database. 
-- If the database does not exist your app can create it as specified earlier in this PowerPoint
 
 
 ## Controllers and Data
