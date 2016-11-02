@@ -236,7 +236,7 @@ public ActionResult Create(Album album)
 
 public ActionResult Create(Album album)
 {
-	if (TryUpdateModel(album)
+	if (TryUpdateModel(album))
 	{
 	  // …do something here
 	}
