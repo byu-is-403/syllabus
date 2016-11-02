@@ -50,7 +50,7 @@ public ActionResult Buy(int id)
 }
 ```
 
-- The authorize attribute requires that the user is logged into the site and forbids anonymous access
+- The authorize attribute requires that the user is logged into the site and forbids anonymous access and also allows you to specify roles and permissions
 - Put the security check as close as possible to the thing you are security
 
 
