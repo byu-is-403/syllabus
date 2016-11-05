@@ -182,7 +182,7 @@ public string Title { get; set; }
 	
 	```csharp
   [Range(0-17)]
-  public in MinorAge { get; set; }
+  public int MinorAge { get; set; }
 	```
 	
 - The values are inclusive and can work with integers and doubles
