@@ -2,7 +2,7 @@
 
 - The first thing to do is to take care of all of the database stuff (i.e. connectionString, dbContext, Models, [Table””], etc.
 - Once those are in place, creating a drop down list is easy!
-- In this sample we will just use the ViewBag. Why? Because there are not many record to worry about. The positions table only has 4 -6 records and the teams table probably only has 20-30 records.
+- In this sample we will just use the ViewBag. Why? Because there are not many records to worry about. The positions table only has 4 -6 records and the teams table probably only has 20-30 records.
 - If there are a lot of records then you might instead want to use something call a ViewModel which could make a strongly typed view and make your code cleaner and easier to maintain.
 - If you are working with data that doesn’t really change much (i.e. positions, teams, cities, states, titles, etc.) then a ViewBag is acceptable.
 
