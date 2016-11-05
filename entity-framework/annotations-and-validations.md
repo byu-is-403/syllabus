@@ -181,7 +181,7 @@ public string Title { get; set; }
 - The Range attribute specifies the minimum and maximum constraints for a numerical value
 	
 	```csharp
-  [Range(0-17)]
+  [Range(0,17)]
   public int MinorAge { get; set; }
 	```
 	
