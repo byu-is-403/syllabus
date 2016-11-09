@@ -9,13 +9,15 @@
 
 ### Modify the web.config
 
-REMOVE
-```xml
-    <authentication mode="None" />
-   
-AND ADD
 
 ```xml
+REMOVE
+
+    <authentication mode="None" />
+   
+```xml
+AND ADD
+
 <system.web>
   <compilation debug="true" targetFramework="4.5.1" />
   <httpRuntime targetFramework="4.5.1" />
