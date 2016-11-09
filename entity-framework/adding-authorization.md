@@ -9,6 +9,11 @@
 
 ### Modify the web.config
 
+REMOVE
+    <authentication mode="None" />
+   
+AND ADD
+
 ```xml
 <system.web>
   <compilation debug="true" targetFramework="4.5.1" />
