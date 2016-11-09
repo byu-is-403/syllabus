@@ -19,7 +19,7 @@
 </system.web>
 ```
 
-- This states that authentication will be set up to use the authentication element in the system.web section and that the mode will be forms based authentication (works with local user credentials). An alternative to forms based us Windows authentication where the operating system’s credentials are used or Organizational authentication using cloud services like Azure.
+- This states that authentication will be set up to use the authentication element in the system.web section and that the mode will be forms based authentication (works with local user credentials). An alternative to forms based is Windows authentication where the operating system’s credentials are used or Organizational authentication using cloud services like Azure.
 - The loginUrl tells ASP.net where to redirect users when they need to authenticate and in this case the system sends them to the Login action method in the Account controller
 - The 2880 timeout is specified in minutes (48 hours)
 - Now you need to set a filter for an action method or controller class which allows you to use additional logic to change the behavior of the framework.
