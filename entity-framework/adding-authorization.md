@@ -15,7 +15,7 @@ REMOVE
 
     <authentication mode="None" />
    
-```xml
+
 AND ADD
 
 <system.web>
