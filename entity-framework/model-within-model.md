@@ -3,7 +3,7 @@
 
 ## Getting Started
 
-- Create an MVC Project 
+- Create an MVC Project called CarsRUs
 - Create a database called CarOwners
 - Within that database I created 2 tables: Cars and Owners
 
