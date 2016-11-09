@@ -10,6 +10,7 @@
 ### Modify the web.config
 
 REMOVE
+```xml
     <authentication mode="None" />
    
 AND ADD
