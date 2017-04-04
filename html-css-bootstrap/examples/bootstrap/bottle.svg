@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="247px" height="494px" viewBox="0 0 247 494" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40 (33762) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M149,40 L149,49.2411755 C200.962514,52.8338718 242,96.1181895 242,149.005611 L242,457.002277 C242,473.569562 228.560674,487 211.998342,487 L32.0016577,487 C15.4321997,487 2,473.562179 2,457.002277 L2,149.005611 C2,97.1493813 41.4676241,54.5115706 92,49.4938269 L92,40 L69.0047607,40 C64.5838535,40 61,36.4250523 61,31.9992049 L61,10.0007951 C61,5.582078 64.5851571,2 69.0047607,2 L174.995239,2 C179.416147,2 183,5.57494774 183,10.0007951 L183,31.9992049 C183,36.417922 179.414843,40 174.995239,40 L149,40 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="240" height="485" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <rect id="path-3" x="39" y="133" width="9" height="299" rx="4.5"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="9" height="299" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" stroke="#000000">
+            <use id="Combined-Shape" mask="url(#mask-2)" stroke-width="20" xlink:href="#path-1"></use>
+            <use id="Rectangle-3" mask="url(#mask-4)" stroke-width="10" xlink:href="#path-3"></use>
+        </g>
+    </g>
+</svg>
