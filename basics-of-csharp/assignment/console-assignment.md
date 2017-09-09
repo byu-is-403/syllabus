@@ -1,6 +1,6 @@
 # Olympic Soccer Tournament
 
-Draw a class diagram that represents a Soccer Tournament. You will need a Team parent class, a child soccer class, and a game class. Write a program that prompts the user to enter in the number of teams competing in an olympic soccer tournament. Then for the number of teams entered, prompt the user to enter the name of the team and the number of points the team has scored. Finally, display the results of the tournament.  Make sure your console output matches the sample screenshot in the requirements below exactly.
+This program represents a Soccer Tournament. You will need a Team parent class, a child soccer class, and a game class. Write a program that prompts the user to enter in the number of teams competing in an olympic soccer tournament. Then for the number of teams entered, prompt the user to enter the name of the team and the number of points the team has scored. Finally, display the results of the tournament.  Make sure your console output matches the sample screenshot in the requirements below exactly.
 
 ## Requirements 
 
