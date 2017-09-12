@@ -9,7 +9,7 @@ This tutorial will show the very basics of a writing data to the console so the 
 ## Getting Started
 
 - Select File | New | Project
-- Select Visual C# | Windows Desktop and choose Console Application (NOTE: Make sure the .NET Framework 4.5.1 is selected)
+- Select Visual C# | choose Console App (.NET Framework) (NOTE: Make sure the .NET Framework 4.5.1 is selected)
 - Make sure the Create directory for solution checkbox is checked
 - Name the Project `MyFirstConsoleApp` and click on the OK Button
 
@@ -24,9 +24,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyFirstConsoleApp {
-  class Program {
-    static void Main(string[] args) {
+namespace MyFirstConsoleApp 
+{
+  class Program 
+  {
+    static void Main(string[] args) 
+    {
       // declare a string variable and assign it a value
       String sName = "Greg Anderson";
       
