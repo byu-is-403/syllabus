@@ -1,6 +1,6 @@
 # Olympic Soccer Tournament
 
-This program represents a Soccer Tournament. You will need a Team parent class, a child soccer class, and a game class. Write a program that prompts the user to enter in the number of teams competing in an olympic soccer tournament. Then for the number of teams entered, prompt the user to enter the name of the team and the number of points the team has scored. Finally, display the results of the tournament.  Make sure your console output matches the sample screenshot in the requirements below exactly.
+This program represents a Soccer Tournament. You will need a Team parent class, a child soccer class, and a game class. Write a program that prompts the user to enter in the number of teams competing in an olympic soccer tournament. Then for the number of teams entered, prompt the user to enter the name of the team and the number of points the team has scored. Finally, display the results of the tournament.  Make sure your console output matches the sample screenshot in the requirements below exactly. NOTE: You are going to have to search how to do some of this. Use StackOverFlow and our reading links in our schedule
 
 ## Requirements 
 
@@ -76,7 +76,7 @@ string teamName = UppercaseFirst(userInput); // teamName = "United states"
 
 Use a List of SoccerTeam objects instead of an array. Use the Add method to add the objects to the list.
 
-Then using a linq expression (to de discussed in class), sort the list in descending order based upon the number of points the team has earned. For example, the statement below says to use a list of teams and order it in descending order by the name property within the list (assuming the list was a list of objects):
+Then using a linq expression (to de discussed in class at a later point but the code is provided), sort the list in descending order based upon the number of points the team has earned. For example, the statement below says to use a list of teams and order it in descending order by the name property within the list (assuming the list was a list of objects):
 
 ```csharp
 List<Team> sortedTeams = teams.OrderByDescending(team => team.name).ToList();
