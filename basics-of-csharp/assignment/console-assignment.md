@@ -2,6 +2,8 @@
 
 This program represents a Soccer Tournament. You will need a Team parent class, a child soccer class, and a game class. Write a program that prompts the user to enter in the number of teams competing in an olympic soccer tournament. Then for the number of teams entered, prompt the user to enter the name of the team and the number of points the team has scored. Finally, display the results of the tournament.  Make sure your console output matches the sample screenshot in the requirements below exactly. NOTE: You are going to have to search how to do some of this. Use StackOverFlow and our reading links in our schedule
 
+If you include a correct class diagram you can receive up to 5 extra points on this assignment.
+
 ## Requirements 
 
 - [ ] Console output matches sample output completely (see screenshot below)
