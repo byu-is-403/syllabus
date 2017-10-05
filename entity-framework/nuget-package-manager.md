@@ -24,7 +24,7 @@ The `Manage NuGet Packages` dialog is accessed by right-clicking the References 
 
 The settings button allows you to configure how you want NuGet to run; i.e. automatically check for and download missing packages. As you click on each available package, NuGet will display information such as package dependencies, version, description, and more.
 
-[http://nugetmusthaves.com/Category/MVC](NuGetMustHaves.com) shows the "must haves" for MVC that you can download and install.
+[http://nugetmusthaves.com/Category/ASP.NET](NuGetMustHaves.com) shows the "must haves" for MVC that you can download and install.
 
 
 ### Package Manager Console
