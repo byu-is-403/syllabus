@@ -329,6 +329,5 @@ Note that the system pluralizes your controller. IOW it makes the Team model wor
 - Save and build the project
 - Run the project
 
-You can test the controllers by accessing the Controller name for the url. For example
-- http://localhost:50113/Players
+You can test the controllers by accessing the Controller name at the end of the url
 
