@@ -8,23 +8,11 @@
 
 ### Create the Database
 
-- Click on the View | SQL Server Object Explorer
+- Click on the Server Explorer
 
-  
-  NOTE: You can use either the SQL Server Object Explorer or the Server Explorer
+- Right click on Data Connections and choose Create New SQL Server Database
+- Click on the down arrow for Server name. Hopefully you will see the database server you set up for your Micorosoft SQL Server Management Studio
 
-- Right click on SQL Server and choose Add SQL Server
-- In the server name type (localDB)\V11.0
-- Click on Connect
-
-
-  NOTE: If this does not work, then you might have to use (localDB)\ProjectsV12 or (localDB)\ mssqllocaldb. 
-    - (localdb)\ProjectsV12 instance is created by SQL Server Data Tools (SSDT)
-    - (localdb)\MSSQLLocalDB is the SQL Server 2014 LocalDB default instance name
-    - (localdb)\v11.0 is the SQL Server 2012 LocalDB default instance name
-
-- Expand the (localDB)v11.0 item
-- Right mouse click on Databases and choose Add New Database
 - In the Database name type NBA and click on the OK button
 
   
@@ -35,7 +23,7 @@
 
 - Expand the NBA item
 - Right mouse click on Tables and choose Add New Table
-- In the Database name type NBA and click on the OK button
+
 - Copy and paste the following script:
 
 ```sql
@@ -72,7 +60,7 @@ CREATE TABLE [dbo].[Position]
 
 #### Add Data to Tables
 
-- Add data to the tables by right mouse clicking on the table and then choosing View Data
+- Add data to the tables by right mouse clicking on the table and then choosing Show Table Data
 
 ##### Position Table
 
@@ -100,9 +88,9 @@ CREATE TABLE [dbo].[Position]
 |  ------ | ------ | ------ | ------ | ------ |
 |  1 | FARIED | KENNETH | F | 2 |
 |  2 | LAUVERGNE | JOFFREY | FC | 2 |
-|  3 | HAYWARD | GORDON | G | 1 |
+|  3 | RUBIO | RICKY | G | 1 |
 |  4 | GOBERT | RUDY | C | 1 |
-|  5 | DURANT | KEVIN | F | 3 |
+|  5 | WESTBROOK | RUSSELL | G | 3 |
 
 
 #### Get Connection String
@@ -112,17 +100,19 @@ CREATE TABLE [dbo].[Position]
 - It should look something like:
 
 ```xml
-Data Source=(localDB)\v11.0;Initial Catalog=NBA;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False
+Data Source=OWNER-HP;Initial Catalog=NBA;Integrated Security=True;Pooling=False
 ```
 
 #### Add the connection string to the Web.config file
 
 - Go to the Web.config for the project
-- In the connectionStrings section, add a connection with the name NBA and then paste in your connection string from the SQL Server object Explorer
+- In the connectionStrings section (you might need to add this), add a connection with the name NBA and then paste in your connection string from the SQL Server object Explorer
 
 ```xml
- <add name="NBAContext" connectionString="Data Source=(localDB)\v11.0;Initial Catalog=NBA;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False"
+   <connectionStrings>
+    <add name="NBAContext" connectionString="Data Source=OWNER-HP;Initial Catalog=NBA;Integrated Security=True;Pooling=False"
       providerName="System.Data.SqlClient" />
+  </connectionStrings>
 ```
 
 The provider is `providerName="System.Data.SqlClient"`
@@ -177,6 +167,13 @@ namespace FantasyBasketball.Models
         public String positionDescription { get; set; }
     }
 }
+```
+
+- NOTE: You will need to resolve the errors for Table and Key. 
+
+```csharp
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 ```
 
 - Create the model for Player.cs
@@ -296,8 +293,11 @@ namespace FantasyBasketball.DAL
 }
 ```
 
+- Add the Entity Framework package to the project by right mouse clicking on the FantasyBasketball solution and choosing Manage NuGet Packages
 
-NOTE: Make sure you resolve all errors (right-mouse click and choose resolve)
+- Click on the Browse tab and choose EntityFramework and click on Install
+
+NOTE: This should resolve any errors. If not, make sure you resolve all errors (right-mouse click and choose resolve)
 
 
 **BUILD the project**
@@ -307,6 +307,8 @@ NOTE: Make sure you resolve all errors (right-mouse click and choose resolve)
 
 - Save and build the project
 - Run the project
+
+- Nothing will really happen yet but we want to make sure it compiles and runs
 
 
 Now you can go modify your landing page to direct to the player, position, and team controllers if you want!
