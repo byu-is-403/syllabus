@@ -302,15 +302,33 @@ NOTE: This should resolve any errors. If not, make sure you resolve all errors (
 
 **BUILD the project**
 
+- Save and build the project
+- Run the project
 
 ### Create your scaffolded controllers and views for Player, Position, Team
+
+Nothing will really happen yet but we want to make sure it compiles and runs
+
+
+Now you can go modify your landing page to direct to the player, position, and team controllers if you want! 
+
+- You can do this by right mouse clicking on the controller folder and choosing New Scaffolded Item.
+- Choose MVC 5 Controller with views, using EntityFramework
+- Click Add
+
+- In the Model class click on the down arrow and choose Player
+- Click Add
+
+The system will generate the controller and views and link them to the model which is linked to our database tables.
+
+- Repeat this process for the Team controller and model
+- Repeat this process for the Position controller and model
+
+Note that the system pluralizes your controller. IOW it makes the Team model work with the TeamsController and the Player model work with the Players controller
 
 - Save and build the project
 - Run the project
 
-- Nothing will really happen yet but we want to make sure it compiles and runs
-
-
-Now you can go modify your landing page to direct to the player, position, and team controllers if you want!
-
+You can test the controllers by accessing the Controller name for the url. For example
+- http://localhost:50113/Players
 
