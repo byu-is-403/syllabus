@@ -19,8 +19,8 @@ REMOVE (If present)
 AND ADD
 
 <system.web>
-  <compilation debug="true" targetFramework="4.5.1" />
-  <httpRuntime targetFramework="4.5.1" />
+  <compilation debug="true" targetFramework="4.6.1" />
+  <httpRuntime targetFramework="4.6.1" />
   <authentication mode="Forms">
     <forms loginUrl="~/Home/Login" timeout="2880" />
   </authentication>
