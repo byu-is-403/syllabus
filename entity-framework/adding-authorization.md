@@ -1,6 +1,6 @@
 # Adding Authorization
 
-- Using the PlayBall project you created in a previous tutorial, we will now add authorization.
+- Using the PlayBall (or FantasyBasketball) project you created in a previous tutorial, we will now add authorization.
 - We are going to hardcode a username of an email address greg@test.com and the password of greg (case-sensitive)
 - However, as discussed in class, in a real world application you would instead want to use a database table that would hold user information. You could also use OAuth authentication and log in using credentials for another site like Google.
 - Adding authorization to a project can be done via a controller, an action method, or by specifying a role
@@ -11,7 +11,7 @@
 
 
 ```xml
-REMOVE
+REMOVE (If present)
 
     <authentication mode="None" />
    
@@ -33,33 +33,6 @@ AND ADD
 - Now you need to set a filter for an action method or controller class which allows you to use additional logic to change the behavior of the framework.
 - There are different types of filters but we are going to focus on the Authorize filter
 
-
-#### Also modify the system.webServer section in the Web.config
-
-```xml
-<system.webServer>
-  <modules>
-
-  </modules>
-</system.webServer>
-```
-
-### Comment out all of the code in the Startup.Auth.cs file after the:
-
-```csharp
-public void ConfigureAuth(IAppBuilder app)
-{  /*
-
-And to the:
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});*/
-        }
-    }
-}
-```
 
 ### Create a new view called Login in the Home Views folder for your personalized Login
 
