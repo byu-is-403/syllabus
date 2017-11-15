@@ -90,7 +90,7 @@ public ActionResult Index() {
       
       <p>Having a party!!!</p>
       
-      @Html.ActionList("RSVP Now", "RsvpForm")
+      @Html.ActionLink("RSVP Now", "RsvpForm")
     </div>
   </body>
   ```
