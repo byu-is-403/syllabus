@@ -4,7 +4,7 @@
 
 - Validations
 - Annotations
-- Requited Attribute
+- Required Attribute
 - DisplayName Attribute
 - StringLength Attribute
 - RegularExpression Attribute
