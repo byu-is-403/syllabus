@@ -112,7 +112,7 @@ List<SoccerTeam> lstSorted = lstTeams.OrderByDescending(x => x.points).ToList();
 ### Create the dynamic HTML in the controller
 
 
-Use the MVC ViewBag dictionary data structure in the controller to store dynamically generated HTML statements. Use a table that consists of headers for the Ranking, Team Name, and Points. Then use a `foreach` statement on the list of SoccerTeam objects to display the team ranking (after the sort - this will just be a counter that starts at 1), the team name, and the team points.
+Use the MVC ViewBag dictionary data structure in the controller to store dynamically generated HTML statements. Use a table that consists of headers for the Ranking, Team Name, and Points. Then use a `foreach` statement on the sorted list of SoccerTeam objects to display the team ranking (after the sort - this will just be a counter that starts at 1), the team name, and the team points.
 
 You might want to look at the `PadRight()` method to help format the data in each row:
 
@@ -124,7 +124,7 @@ ViewBag.Output += "<th>Team Name</th>";
 ViewBag.Output += "<th>Points</th>";
 ViewBag.Output += "</tr>";
 
-//add the rest of the html table rows (using <tr> tag) and cells (using <td> tag)
+//add the rest of the html table rows (using <tr> tag) and cells (using <td> tag) and a foreach statement
 //make sure you close the table html tag
 ```
 
