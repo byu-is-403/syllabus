@@ -8,6 +8,42 @@ When completed, one team member needs to zip the project and upload to Learning 
 
 As a group, schedule a time with the TAs for grading
 
+## CSS File
+
+Create your own CSS file by adding a new style sheet to the content folder. Include the following CSS to center an image on a page:
+
+```
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+```
+
+## JavaScript File
+
+Create your own JavaScript file by adding a new JavaScript file to the Scripts folder
+
+```
+function w3_open() {
+    document.getElementById("main").style.marginLeft = "25%";
+    document.getElementById("mySidebar").style.width = "25%";
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+    document.getElementById("main").style.marginLeft = "0%";
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("openNav").style.display = "inline-block";
+}
+```
+
+## Import an Image
+
+Create your own graphic file by adding a new folder called *Graphics* and then adding a .jpg image to that folder
+
+
 ## Menu Structure
 
 Use the NuGet package manager and add Bootstrap (by The Bootstrap Authors) to your project. 
