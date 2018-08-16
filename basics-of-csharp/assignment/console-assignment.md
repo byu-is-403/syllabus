@@ -7,8 +7,8 @@ This program represents one of the conferences of the MLS Soccer League. You wil
 - [ ] Program uses a `List` object to store the list of soccer teams
 - [ ] Program uses another `List` object to store the sorted list of soccer teams
 - [ ] Soccer teams are sorted by the team's points in descending order
-- [ ] Result table has table headers for `Position`, `Name`, and `Points`
-- [ ] Result table displays each team's ranking, team name, and points as a table row
+- [ ] Result table has table headers for `Ranking`, `Ream Name`, and `Points`
+- [ ] Result table displays each team's ranking (generated in a loop starting at 1), team name, and points as a table row
 - [ ] Properly implements Team and SoccerTeam classes with inheritance
 - [ ] Adds comments to make code easier to understand
 - [ ] Improving the layout of the html output is worth up to 10 points (otherwise if all works you receive a 90%). This will be subjective in grading so I would hope you will make it look professional
