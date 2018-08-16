@@ -1,4 +1,4 @@
-# MLS Soccer League
+# MLS Soccer League - Work as a Team on this Assignment
 
 This program represents one of the conferences of the MLS Soccer League. You will need a Team parent class and a child soccer class. You will create an ASP.NET Web Application (.NET Framework). Choose Empty and MVC. You will be required to create models, a controller called IndexController, and a view called Index.
 
@@ -147,7 +147,7 @@ Right mouse click in the controller and choose Add View. Make sure it has the na
 ### Output
 
 
-Have fun with this and make it look professional. Sloppy output will result in 0 out of 3 points. The grading will be subjective for the output but the TAs will be able to tell whether or not your team put in necessary effort to receive more points.
+Have fun with this and make it look professional. I want to reward those that practiced their HTML, CSS, and Bootstrap so sloppy output will result in 0 out of 3 points. The grading will be subjective for the output but the TAs will be able to tell whether or not your team put in necessary effort to receive more points.
 
 
 
