@@ -117,12 +117,15 @@ Use the MVC ViewBag dictionary data structure in the controller to store dynamic
 You might want to look at the `PadRight()` method to help format the data in each row:
 
 ```csharp
-ViewBag.Output += "<table>";
+ViewBag.Output = "<table>";
 ViewBag.Output += "<tr>";
 ViewBag.Output += "<th>Ranking</th>";
 ViewBag.Output += "<th>Team Name</th>";
 ViewBag.Output += "<th>Points</th>";
 ViewBag.Output += "</tr>";
+
+//add the rest of the html table rows (using <tr> tag) and cells (using <td> tag)
+//make sure you close the table html tag
 ```
 
 
