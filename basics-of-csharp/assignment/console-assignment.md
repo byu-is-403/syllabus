@@ -12,7 +12,7 @@ This program represents one of the conferences of the MLS Soccer League. You wil
 - [ ] Properly implements Team and SoccerTeam classes with inheritance
 - [ ] Adds comments to make code easier to understand
 - [ ] Improving the layout of the html output is worth up to 10 points (otherwise if all works you receive a 90%). This will be subjective in grading so I would hope you will make it look professional
-- [ ] Upload the zipped project (entire solution) to the Learning Suite assignment and then schedule a time with the TAs for them to grade this assignment
+- [ ] Upload the zipped project (entire solution) to the Learning Suite assignment (one per team) and then schedule a time with the TAs for them to grade this assignment
 
 
 ### Create Team and SoccerTeam Classes As Models
