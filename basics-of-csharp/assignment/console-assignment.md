@@ -1,111 +1,152 @@
-# Olympic Soccer Tournament
+# MLS Soccer League
 
-This program represents a Soccer Tournament. You will need a Team parent class, a child soccer class, and a game class. Write a program that prompts the user to enter in the number of teams competing in an olympic soccer tournament. Then for the number of teams entered, prompt the user to enter the name of the team and the number of points the team has scored. Finally, display the results of the tournament.  Make sure your console output matches the sample screenshot in the requirements below exactly. NOTE: You are going to have to search how to do some of this. Use StackOverFlow and our reading links in our schedule
-
-If you include a correct class diagram you can receive up to 5 extra points on this assignment.
+This program represents one of the conferences of the MLS Soccer League. You will need a Team parent class, a child soccer class, and a game class. You will create an ASP.NET Web Application (.NET Framework). Choose Empty and MVC. You will be required to create models, a controller, and a view.
 
 ## Requirements 
 
-- [ ] Console output matches sample output completely (see screenshot below)
-- [ ] First letter of each teams's name is capitalized
-- [ ] Program uses a `List` object to store the list of teams
-- [ ] Teams are sorted by the team's points in descending order
-- [ ] Result table has column headers and separators for `Position`, `Name`, and `Points`
-- [ ] Result table displays each team's position, name, and points
-- [ ] Properly implements [Team and SoccerTeam classes](#create-team-and-soccerteam-classes) but you do NOT need to implement the Game class
-- [ ] Use exception handling to make sure that the number of teams they enter is a valid integer (try/catch within a while loop).
+- [ ] Program uses a `List` object to store the list of soccer teams
+- [ ] Program uses another `List` object to store the sorted list of soccer teams
+- [ ] Soccer teams are sorted by the team's points in descending order
+- [ ] Result table has table headers for `Position`, `Name`, and `Points`
+- [ ] Result table displays each team's position, name, and points as a table row
+- [ ] Properly implements Team and SoccerTeam classes with inheritance
 - [ ] Adds comments to make code easier to understand
-- [ ] Upload the zipped project to the Learning Suite assignment (include the class diagram, worth 5 extra credit points, in your upload in the main root directory for your project so TAs can easily find it) and then schedule a time with the TAs for them to grade this assignment
+- [ ] Improving the layout of the html output is worth up to 10 points (otherwise if all works you receive a 90%). This will be subjective in grading so I would hope you will make it look professional
+- [ ] Upload the zipped project (entire solution) to the Learning Suite assignment and then schedule a time with the TAs for them to grade this assignment
 
-![console-output](https://cloud.githubusercontent.com/assets/8953261/17834223/07e10282-66f3-11e6-8e1b-30ec4c018968.jpg)
 
+### Create Team and SoccerTeam Classes As Models
 
-### Create Team and SoccerTeam Classes
-
-You need to create a parent class called `Team` that has the following properties:
+You need to create a parent class model called `Team` that has the following properties:
 
 ``` csharp
-public string name
-public int wins
-public in loss
+public string name { get; set; }
+public int wins { get; set; }
+public int loss { get; set; }
 ```
 
 
-You need to create a subclass called `SoccerTeam` that inherits from the `Team` class and that has the following properties:
+You need to create a subclass model called `SoccerTeam` that inherits from the `Team` class and that has the following properties:
 
 ```csharp
-public int draw
-public int goalsFor
-public int goalsAgainst
-public int differential
-public int points
+//empty constructor
+public SoccerTeam()
+{
+
+}
+//constructor with name and points
+public SoccerTeam(string teamName, int teamPoints)
+{
+    base.name = teamName;
+    this.points = teamPoints;
+}
+
+public int draw { get; set; }
+public int goalsFor { get; set; }
+public int goalsAgainst { get; set; }
+public int differential { get; set; }
+public int points { get; set; }
 ```
 
 The SoccerTeam class should have a constructor that receives the `name` and `points` values as parameters and assigns them to the properties.
 
-## Project Tips
+
+### Creating the lists in the controller
 
 
-### Capitalizing the Team's Name
+Create a new controller called IndexController. In this controller you will create a list of SoccerTeam objects. Use a List of SoccerTeam objects instead of an array. 
 
-When the user enters the team name, we want to capitalize the first character.
-
-To do this, create a method like the following in your main class:
 
 ```csharp
-static string UppercaseFirst(string s)
-{
-  // Check for empty string.
-  if (string.IsNullOrEmpty(s))
-  {
-    return string.Empty;
-  }
-  // Return char and concat substring.
-  return char.ToUpper(s[0]) + s.Substring(1);
-}
-```
-
-You will captitalize the team name by calling the UppercaseFirst method on the user's input like this:
-
-```csharp
-string userInput = Console.ReadLine(); // reads in "united states"
-string teamName = UppercaseFirst(userInput); // teamName = "United states"
+//declare variables
+List<SoccerTeam> lstTeams = new List<SoccerTeam>();
+List<SoccerTeam> lstSorted;
 ```
 
 
-### Storing and Sorting the User's Input 
+### Loading the data in the controller
 
 
-Use a List of SoccerTeam objects instead of an array. Use the Add method to add the objects to the list.
+Use a newly created List of SoccerTeam objects and add the following data: 
 
-Then using a linq expression (to de discussed in class at a later point but the code is provided), sort the list in descending order based upon the number of points the team has earned. For example, the statement below says to use a list of teams and order it in descending order by the name property within the list (assuming the list was a list of objects):
+
+Team Name     Points
+
+RSL           35
+Colorado      24
+FC Dallas     42
+Sporting KC   39
+San Jose      16
+Houston       27
+Seattle       32
+Vancouver     33
+Minnesota     29
+Portland      37
+LA Galaxy     37
+LAFC          39
+
+
+Here is how you could add the data using the Add method for the list object
+
 
 ```csharp
-List<Team> sortedTeams = teams.OrderByDescending(team => team.name).ToList();
+//Load the data
+lstTeams.Add(new SoccerTeam("RSL", 35));
 ```
 
-*NOTE: This is a linq statement that can be interpretted to say "Using the list called `teams`, which is like an array of team names, sort it in descending order by grabbing each element one at a time and looking at the `name` attribute of that element/object. Sort it in descending order if needed and when the sorting is done, return the sorted list to the variable called `sortedTeams`.*
+### Sorting the data in the controller
 
 
-### Displaying Tournament Results
+Using the list of Soccer Teams you created, sort the data in DESCENDING order and store it to a new list thus preserving the original.
 
-To create the table rows, use a `foreach` statement on the list of SoccerTeam objects to display the team position (after the sort), the team name, and the team points.
+You use a linq expression (to de discussed in class at a later point but the code is provided) to sort the list in descending order based upon the number of points the soccer team has earned. For example, the statement below says to use a list of soccer teams called lstTeams and order it in descending order by passing each item in the list of lstTeams to the x variable. Then it says to use THAT object and look at the name attribute for the sorting. When completed it returns the results as a new list to lstSorted. It seems magical ;) and that is why we love to use it!
+
+```csharp
+//Sort the list
+List<SoccerTeam> lstSorted = lstTeams.OrderByDescending(x => x.name).ToList();
+```
+
+*NOTE: This is a linq statement that can be interpretted to say "Using the list called `lstTeams`, which is like an array of team names, sort it in descending order by grabbing each element one at a time and looking at the `name` attribute of that element/object. Sort it in descending order if needed and when the sorting is done, return the sorted list to the new list variable called `lstSorted`.*
+
+
+
+### Create the dynamic HTML in the controller
+
+
+Use the MVC ViewBag dictionary data structure in the controller to store dynamically generated HTML statements. Use a table that consists of headers for the Ranking, Team Name, and Points. Then use a `foreach` statement on the list of SoccerTeam objects to display the team ranking (after the sort - this will just be a counter that starts at 1), the team name, and the team points.
 
 You might want to look at the `PadRight()` method to help format the data in each row:
 
 ```csharp
-Convert.ToString(name).PadRight(25, ' ');
+ViewBag.Output += "<table>";
+ViewBag.Output += "<tr>";
+ViewBag.Output += "<th>Ranking</th>";
+ViewBag.Output += "<th>Team Name</th>";
+ViewBag.Output += "<th>Points</th>";
+ViewBag.Output += "</tr>";
 ```
 
-This statement says to use the variable called 'name' and convert it to a string and then pad it to the right with spaces until the length including the data and spaces equals 25.
 
-### More methods you might use:
+### Create the View and display the results
+
+
+Right mouse click in the controller and choose Add View. Make sure it has the name Index. 
 
 ```csharp
-Convert.ToInt32(stringValue)
-PadRight(totalLength, chartoInsert)
-Convert.ToString(intValue)
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>MLS Standings</h2>
+@Html.Raw((String)ViewBag.Output)
 ```
+
+
+### Output
+
+
+Have fun with this and make it look professional. Sloppy output will result in 0 out of 10 points. The grading will be subjective for the output but the TAs will be able to tell whether or not your team put in necessary effort to receive more points.
+
 
 
 
