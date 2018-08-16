@@ -11,7 +11,7 @@ This program represents one of the conferences of the MLS Soccer League. You wil
 - [ ] Result table displays each team's ranking (generated in a loop starting at 1), team name, and points as a table row
 - [ ] Properly implements Team and SoccerTeam classes with inheritance
 - [ ] Adds comments to make code easier to understand
-- [ ] Improving the layout of the html output is worth up to 10 points (otherwise if all works you receive a 90%). This will be subjective in grading so I would hope you will make it look professional
+- [ ] Improving the layout of the html output is worth up to 3 points (otherwise if all works you receive 22 points out of 25 for an 88%). This will be subjective in grading so I would hope you will make it look professional
 - [ ] Upload the zipped project (entire solution) to the Learning Suite assignment (one per team) and then schedule a time with the TAs for them to grade this assignment
 
 
@@ -147,7 +147,7 @@ Right mouse click in the controller and choose Add View. Make sure it has the na
 ### Output
 
 
-Have fun with this and make it look professional. Sloppy output will result in 0 out of 10 points. The grading will be subjective for the output but the TAs will be able to tell whether or not your team put in necessary effort to receive more points.
+Have fun with this and make it look professional. Sloppy output will result in 0 out of 3 points. The grading will be subjective for the output but the TAs will be able to tell whether or not your team put in necessary effort to receive more points.
 
 
 
