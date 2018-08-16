@@ -7,7 +7,7 @@ You are the owner of a very successful hamburger restaurant. Your faithful custo
 
 ## Requirements
 
-Create a new C# Console Application. In the `Main` function, add a new variable of type `Queue` that contains items of type `string`.
+Create a new ASP.NET Web Application (.NET Framework). Add a new controller called `Index`. In the `Index` controller, add a new variable of type `Queue` that contains items of type `string`.
 
 
 * Create a variable for a `Queue` with items of type `string`
@@ -38,7 +38,7 @@ Dan Morain                    65
 
 ### Resources
 
-Here is some code that will help you with this project. Paste it into your `Program` class above your `Main` function.
+Here is some code that will help you with this project. Paste it into your controller.
 
 ```csharp
 public static Random random = new Random();
@@ -82,4 +82,4 @@ As you iterate through your customers, you should keep track of how many burgers
 
 If you are using the provided `randomName` function, you will encounter the same customer multiple times. Make sure your code increments the number of burgers ordered each time (hint: use `+=`).
 
-Once you have iterated over all the customers in the queue, you need to print their name and the total number of burgers consumed. Do this by iterating over your dictionary. Again, there are many ways to accomplish this; you can choose to do it any way as long as your output resembles the sample output above.
+Once you have iterated over all the customers in the queue, you need to display their name and the total number of burgers consumed in the view. Do this by iterating over your dictionary. Again, there are many ways to accomplish this so have fun and be creative.
