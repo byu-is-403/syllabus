@@ -22,7 +22,7 @@ Create a new ASP.NET Web Application (.NET Framework). Add a new controller call
 
 ### Sample Output
 
-Your output will look something like this:
+Your output could look something like this:
 
 ```
 Greg Anderson                 131
@@ -35,6 +35,7 @@ Joann Fisher                  72
 Dan Morain                    65
 ```
 
+> **Note**: However, in order to receive 1 to 3 points for the output you will want to be more creative. If you just display the output as above and the program works, you will receive 22 out of 25 points for an 88%.
 
 ### Resources
 
