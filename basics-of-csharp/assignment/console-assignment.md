@@ -69,21 +69,20 @@ List<SoccerTeam> lstSorted;
 
 Use a newly created List of SoccerTeam objects and add the following data: 
 
-
-Team Name     Points
-
-RSL           35
-Colorado      24
-FC Dallas     42
-Sporting KC   39
-San Jose      16
-Houston       27
-Seattle       32
-Vancouver     33
-Minnesota     29
-Portland      37
-LA Galaxy     37
-LAFC          39
+| Team Name | Points |
+| --- | --- |
+| RSL | 35 |
+| Colorado | 24 |
+| FC Dallas | 42 |
+| Sporting KC | 39 |
+| San Jose | 16 |
+| Houston | 27 |
+| Seattle | 32 |
+| Vancouver | 33 |
+| Minnesota | 29 |
+| Portland | 37 |
+| LA Galaxy | 37 |
+| LAFC | 39 |
 
 
 Here is how you could add the data using the Add method for the list object
