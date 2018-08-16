@@ -102,7 +102,7 @@ You use a linq expression (to de discussed in class at a later point but the cod
 
 ```csharp
 //Sort the list
-List<SoccerTeam> lstSorted = lstTeams.OrderByDescending(x => x.name).ToList();
+List<SoccerTeam> lstSorted = lstTeams.OrderByDescending(x => x.points).ToList();
 ```
 
 *NOTE: This is a linq statement that can be interpretted to say "Using the list called `lstTeams`, which is like an array of team names, sort it in descending order by grabbing each element one at a time and looking at the `name` attribute of that element/object. Sort it in descending order if needed and when the sorting is done, return the sorted list to the new list variable called `lstSorted`.*
