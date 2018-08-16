@@ -1,6 +1,6 @@
 # MLS Soccer League
 
-This program represents one of the conferences of the MLS Soccer League. You will need a Team parent class, a child soccer class, and a game class. You will create an ASP.NET Web Application (.NET Framework). Choose Empty and MVC. You will be required to create models, a controller, and a view.
+This program represents one of the conferences of the MLS Soccer League. You will need a Team parent class and a child soccer class. You will create an ASP.NET Web Application (.NET Framework). Choose Empty and MVC. You will be required to create models, a controller called IndexController, and a view called Index.
 
 ## Requirements 
 
