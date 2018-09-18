@@ -95,14 +95,14 @@ public ActionResult Index() {
   </body>
   ```
 
-- `Html.ActionLink` is a helper method
+- `Html.ActionList` is a helper method
 - They include methods for: 
   - links
   - text inputs
   - checkboxes
   - selections
   - and more
-- ActionLink takes 2 parameters:
+- ActionList takes 2 parameters:
   1. Text to display in the link
   2. Action method to perform when the text is clicked
   
