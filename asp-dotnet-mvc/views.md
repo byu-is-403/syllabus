@@ -407,7 +407,7 @@ public ViewResult RsvpForm(GuestResponse guestResponse)
   
 - Add these statements in your view 
 
-  ```html
+```html
 <body>
     <div class="jumbotron">
         <div class="container">
@@ -433,7 +433,7 @@ new SelectListItem()
         </div>
     </div>
 </body>
-  ```
+```
 
 
 
