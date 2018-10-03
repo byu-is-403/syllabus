@@ -403,6 +403,39 @@ public ViewResult RsvpForm(GuestResponse guestResponse)
     }
   ```
 
+### Validation in the View
+  
+- Add these statements in your view 
+
+  ```html
+<body>
+    <div class="jumbotron">
+        <div class="container">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                <p>Name: @Html.TextBoxFor(x => x.Name)</p>
+
+                <p>Email: @Html.TextBoxFor(x => x.Email)</p>
+
+                <p>Phone: @Html.TextBoxFor(x => x.Phone)</p>
+
+                <p>
+                    Will you attend? @Html.DropDownListFor(x => x.WillAttend, new[] {
+new SelectListItem()
+{Text = "Yes, I will be there", Value = bool.TrueString},
+new SelectListItem()
+{Text = "Nope", Value = bool.FalseString} }, "Choose an option")
+                </p>
+                <input type="submit" value="Submit RSVP" />
+            }
+        </div>
+    </div>
+</body>
+  ```
+
+
 
 
 
