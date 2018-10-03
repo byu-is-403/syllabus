@@ -405,7 +405,7 @@ public ViewResult RsvpForm(GuestResponse guestResponse)
 
 ### Validation in the View
   
-- Add these statements in your view 
+- Replace your body statements with these statements in your view 
 - The @Html.AntiForgeryToken() method helps prevent Cross Site Request Forgery (CSRF). That is when a hacker bypasses security for submission to a post. You will learn more about this in your security course. However, this statement creates a token as a hidden field and when the user submits the html form, it checks for the hidden token value and confirms if it matches what it was expecting on the submission. If not, then the system knows that the form and security were bypassed.
 - The ValidationSummary method generates an unordered list (ul element) of validation messages that are in the Model's dictionary object. Including a false as a parameter says to include field level error messages in the model. The text-danger parameter displays the error message in red.
 
