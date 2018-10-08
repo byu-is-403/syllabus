@@ -119,22 +119,22 @@ If the user chooses Exit, then redirect back to the https://www.byu.edu site
 
 For each menu item you will create a variable that will be used within the controller (i.e. stack, queue, dictionary)
 
-**Add one item to ...** - prompts the user to enter a string and then inserts the input into the data structure.
+**Add one item to ...** - generate a new value (New Entry # - maybe find out the number of items in the data structure and add 1 to it) and then insert it input into the data structure.
 
 
 **Add Huge List of Items to ...** – first clears the data structure and then generate 2,000 items in the data structure with the value of “New Entry” concatenated with the number. For example, New Entry 1, New Entry 2, New Entry 3. For the dictionary, the key will be the generated string ("New Entry 2") and the value will be the current number (`2`).
 
 
-**Display ...** - display the contents of the data structure. You must use the foreach loop when displaying the data. Handle any errors and inform the user.
+**Display ...** - display the contents of the data structure. You must use the foreach loop when displaying the data. Handle any errors and inform the user. NOTE: You can send it back to the Index view or make another view
 
 
-**Delete from ...** - prompt for which item to delete from the structure. Handle any errors and inform the user.
+**Delete from ...** - delete any item from the structure. Handle any errors and inform the user somewhere on the form if it cannot delete. HINT: Use the ViewBag
 
 
 **Clear ...** - wipe out the contents of the data structure
 
 
-**Search ...** - Search for an item in the data structure and return if it was found or not found and how long it took to search. You can create a StopWatch object using code like so (just a simple example). Then display the information in the view.
+**Search ...** - Search for any item in the data structure (hardcoded) and return if it was found or not found and how long it took to search. You can create a StopWatch object using code like so (just a simple example). Then display the information in the view. You can pass this result back to the view in the ViewBag and display it somewhere on the view
 
 ```csharp
 System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
