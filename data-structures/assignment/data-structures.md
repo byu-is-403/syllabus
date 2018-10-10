@@ -48,7 +48,7 @@ Create your own graphic file by adding a new folder called *Graphics* and then a
 
 Use the NuGet package manager and add Bootstrap (by The Bootstrap Authors) to your project. 
 
-You will need to create a controller called Index and a view called Index.Stack
+You will need to create a controller called Index and a view called Index.
 
 Your application will be based around a basic navigation menu. 
 
