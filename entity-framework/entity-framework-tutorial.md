@@ -42,7 +42,7 @@ CREATE TABLE [dbo].[Team]
 
 - Click on the Update tab
 - Click on the Update Database button	NOTE: The table is now created
-- Repeat this process for the following table structures:
+- Repeat this process for the following table structures one at a time:
 
 ```sql
 CREATE TABLE [dbo].[Player]
