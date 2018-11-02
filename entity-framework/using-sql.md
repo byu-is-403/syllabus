@@ -256,8 +256,8 @@ namespace PlayBall
 ```
 
 - Save and Build the project
-- Open the HomeController.cs file
-- Add the using clause for the PlayBall.DAL and the PlayBall.Models
+- Create and Open the HomeController.cs file
+- Add the code for the controller as follows and using the clauses for the PlayBall.DAL and the PlayBall.Models
 - Add the db context variable for BasketballContext to the HomeController
 
 ```csharp
