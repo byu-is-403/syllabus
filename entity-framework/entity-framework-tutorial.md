@@ -12,7 +12,7 @@
 - Click on the Server Explorer
 
 - Right click on Data Connections and choose Create New SQL Server Database
-- Click on the down arrow for Server name. Hopefully you will see the database server you set up for your Micorosoft SQL Server Management Studio
+- Click on the down arrow for Server name. Hopefully you will see the database server you set up for your Micorosoft SQL Server Management Studio. If not, you can open SSMS and copy the database server name when you first connect and then paste it into the Visual Studio Server name in the Server Explorer.
 
 - In the Database name type NBA and click on the OK button
 
