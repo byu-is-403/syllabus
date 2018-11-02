@@ -371,7 +371,7 @@ namespace PlayBall.Controllers
 ```
 
 - Save and Build the project
-- Now you can go create a new controller in the HomeController.cs file for the Edit action which will receive the playerID as a parameter and you can use that value to look up the player in the Player table, store the record to the model, and return it to the Edit View to change the record.
+- Now you can go create a new controller in the HomeController.cs file for the Edit action which will receive the playerID as a parameter and uses that value to look up the player in the Player table and then changes the player's team to have the teamID of "JA" so that they are now on the Jazz. It then Redirections to the Index method in the Home controller.
 
 ```csharp
 public ActionResult Edit(int? id)
