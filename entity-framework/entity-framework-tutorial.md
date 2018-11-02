@@ -12,17 +12,19 @@
 - Click on the Server Explorer
 
 - Right click on Data Connections and choose Create New SQL Server Database
-- Click on the down arrow for Server name. Hopefully you will see the database server you set up for your Micorosoft SQL Server Management Studio. If not, you can open SSMS and copy the database server name when you first connect and then paste it into the Visual Studio Server name in the Server Explorer.
+- Click on the down arrow for Server name. Hopefully you will see the database server you set up for your Micorosoft SQL Server Management Studio. If not, you can open SSMS and copy the database server name when you first connect and then paste it into the Visual Studio Server name in the Server Explorer.  HOWEVER, if you receive an error when trying to use the Server Explorer, it might be best to copy the string from the SSMS opening login window since it includes the server name along with the instance (ie. msm-gander16-b\sqlexpress). You need to include the instance name.
 
 - In the Database name type NBA and click on the OK button
 
   
   NOTE: The database is now created!
   
+ 
+  
 
 #### Create the tables
 
-- Expand the NBA item
+- Expand the NBA database
 - Right mouse click on Tables and choose Add New Table
 
 - Copy and paste the following script:
