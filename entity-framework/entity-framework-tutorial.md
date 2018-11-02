@@ -103,17 +103,17 @@ CREATE TABLE [dbo].[Position]
 - It should look something like:
 
 ```xml
-Data Source=OWNER-HP;Initial Catalog=NBA;Integrated Security=True;Pooling=False
+Data Source=MSM-GANDER16-B\sqlexpress;Initial Catalog=NBA;Integrated Security=True;Pooling=False
 ```
 
 #### Add the connection string to the Web.config file
 
-- Go to the Web.config for the project
-- In the connectionStrings section (you might need to add this), add a connection with the name NBA and then paste in your connection string from the SQL Server object Explorer
+- Go to the Web.config for the project under the Solution Explorer (Make sure you choose Web.config and NOT web.config)
+- In the connectionStrings section (you might need to add this), add a connection with the name NBA and then paste in your connection string from the SQL Server object Explorer (NOTE: your connection string will look different from this so make sure you copy and paste YOUR connection string)
 
 ```xml
    <connectionStrings>
-    <add name="NBAContext" connectionString="Data Source=OWNER-HP;Initial Catalog=NBA;Integrated Security=True;Pooling=False"
+    <add name="NBAContext" connectionString="Data Source=MSM-GANDER16-B\sqlexpress;Initial Catalog=NBA;Integrated Security=True;Pooling=False"
       providerName="System.Data.SqlClient" />
   </connectionStrings>
 ```
@@ -204,7 +204,7 @@ namespace FantasyBasketball.Models
 }
 ```
 
-- NOTE: I can set up navigational properties if I wanted by identifying the foreign key adding virtual references to the foreign tables
+- NOTE: However, I can set up navigational properties if I wanted by identifying the foreign key adding virtual references to the foreign tables. This allows my model to link to other tables using foreign keys. Change your code to match the following:
 
 ```csharp
 [Table("Player")]
@@ -228,12 +228,12 @@ namespace FantasyBasketball.Models
 ### Modify the Global.asax.cs file
 
 - Modify the Global.asax.cs file by adding the following:
-	- System.Data.Entity
-	- Database.SetInitializer<dbcontextname from the connectionstring>(null)
-	- Projectname.Models;
+	- System.Data.Entity in the uses clause
+	- Database.SetInitializer<dbcontextname from the connectionstring>(null) in the method - This turns off the entity framework database initialization code which can be used to create databases, drop databases, etc. If interested see - http://www.entityframeworktutorial.net/code-first/database-initialization-strategy-in-code-first.aspx
+	- Projectname.Models and Projectname.DAL in the uses clause (as shown below)
 
 
-NOTE: the dbcontext name is the same name as the connection string name. We will soon create the actual dbcontext variable. Don’t worry about the error messages for now.
+NOTE: the dbcontext name is the same name as the connection string name. We will soon create the actual dbcontext variable. DO NOT WORRY about the error messages for now. DO NOT BUILD YET!
 
 ```csharp
 using System;
@@ -296,7 +296,7 @@ namespace FantasyBasketball.DAL
 }
 ```
 
-- Add the Entity Framework package to the project by right mouse clicking on the FantasyBasketball solution and choosing Manage NuGet Packages
+- If you haven't done so already, add the Entity Framework package to the project by right mouse clicking on the FantasyBasketball solution and choosing Manage NuGet Packages
 
 - Click on the Browse tab and choose EntityFramework and click on Install
 
@@ -322,7 +322,7 @@ Now you can go modify your landing page to direct to the player, position, and t
 - In the Model class click on the down arrow and choose Player
 - Click Add
 
-The system will generate the controller and views and link them to the model which is linked to our database tables.
+The system will generate the controller (This is cool!!!!) AND views and link them to the model which is linked to our database tables.
 
 - Repeat this process for the Team controller and model
 - Repeat this process for the Position controller and model
@@ -332,5 +332,5 @@ Note that the system pluralizes your controller. IOW it makes the Team model wor
 - Save and build the project
 - Run the project
 
-You can test the controllers by accessing the Controller name at the end of the url
+You can test the controllers by accessing the Controller name at the end of the url (localhst:53148/Teams)
 
