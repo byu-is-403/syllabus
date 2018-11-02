@@ -318,7 +318,7 @@ namespace PlayBall.Controllers
 }
 ```
 
-- Modify the Index.cshtml view in the Home Views controller
+- Create a scaffolded view for the Index action method in the HomeController. Name the View Index, The Template should be List, the Model class should be NewPlayer, and the Data  context  class should be BasketballContext. However, we want our view to look a little different because we want to see the teamName to also show up but we don't want to show the positionCode and the teamID. If you want, you can paste in this code in the Index.cshtml view in the Home Views controller which will add a jumbotron, remove the Create new Action link, Change the title of the view in html, 
 
 ```html
 @model IEnumerable<PlayBall.Models.NewPlayer>
@@ -373,7 +373,7 @@ namespace PlayBall.Controllers
 ```
 
 - Save and Build the project
-- Create a new controller in the HomeController.cs file for the Edit action
+- Now you can go create a new controller in the HomeController.cs file for the Edit action which will receive the playerID as a parameter and you can use that value to look up the player in the Player table, store the record to the model, and return it to the Edit View to change the record.
 
 ```csharp
 public ActionResult Edit(int? id)
