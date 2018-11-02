@@ -3,8 +3,9 @@
 **DO NOT BUILD UNTIL YOU ARE TOLD TO DO SO**
 
 - Open Visual Studio
-- Create a New MVC Project named `FantasyBasketball`
-- Choose the MVC template so that JQuery and Bootstrap are automatically incorporated
+- Create a New MVC (Choose MVC, not Empty) Project named `FantasyBasketball`
+- We chose the MVC template so that JQuery and Bootstrap are automatically incorporated
+- However, use the NuGet Package manager and make sure you include the EntityFramework into the solution
 
 ### Create the Database
 
