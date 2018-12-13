@@ -7,7 +7,7 @@
 - This tutorial will show you the basics of attaching authorization to an action method
 
 
-### Modify the web.config
+### Modify the Web.config in the main project folder (not the one in the Views Folder)
 
 
 ```xml
