@@ -1,18 +1,18 @@
-<h1>Java Compared to C#</h1>
+<h1>JavaScript Compared to C#</h1>
 
 ## Program Structure
 
 <table>
   <thead>
     <tr>
-      <th>Java</th>
+      <th>JavaScript</th>
       <th>C#</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        <pre lang="java">
+        <pre lang="javascript">
 package hello;
 
 public class HelloWorld {
