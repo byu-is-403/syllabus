@@ -174,23 +174,30 @@ Math.Pow(x, y)
   <tbody>
     <tr>
       <td>
-        <pre lang="java">
-greeting = age < 20 ? "What's up?" : "Hello";
+        <pre lang="javascript">
+var greeting = (age < 20) ? "What's up?" : "Hello";
 
 if (x < y)
-  System.out.println("greater");
+{
+  alert("greater");
+}
 
-if (x != 100) {    
+if (x != 100) 
+{    
   x *= 5;
   y *= 2;
 } else
+{
   z *= 6;
+}
 
-int selection = 2;
+var selection = 2;
 switch (selection) {      
   case 1: x++;   // Falls through to next case if no break
-  case 2: y++;   break;
-  case 3: z++;   break;
+  case 2: y++;   
+          break;
+  case 3: z++;   
+          break;
   default: other++;
 }
         </pre>
@@ -234,31 +241,39 @@ switch (color) {
   <tbody>
     <tr>
       <td>
-        <pre lang="java">
+        <pre lang="javascript">
 while (i < 10)
+{
   i++;
+}
 
 for (i = 2; i <= 10; i + 2)
-  System.out.println(i);
+{
+  alert(i);
+}
 
-int i = 0;
+var i = 0;
 do
+{
   i++
+}
 while (i < 10);
 
-for (int i : numArray) // foreach construct
+for (var i in numArray) // foreach construct
+{
   sum += 1;
+}
 
 // for loop can be used to iterate through any collection
-import java.util.ArrayList;
 
-ArrayList<Object> list = new ArrayList<Object>();
-list.add(10);
-list.add("Bisons");
-list.add(2.3);
+var a = [];
+a[0] = "a";
+a[1] = "b";
+a[2] = "c";
 
-for (Object o : list) {
-  System.out.println(o);
+for (var value in a) 
+{
+  alert(value);
 }
         </pre>
       </td>
