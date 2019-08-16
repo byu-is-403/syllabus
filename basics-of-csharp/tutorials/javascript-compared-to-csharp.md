@@ -1,6 +1,6 @@
 <h1>JavaScript Compared to C#</h1>
 
-## Program Structure
+## Comments
 
 <table>
   <thead>
@@ -12,55 +12,12 @@
   <tbody>
     <tr>
       <td>
-        <pre lang="javascript">
-package hello;
-
-public class HelloWorld {
-  public static void main(String[] args) {
-    String name =  "Java";
-
-    System.out.println("Hello, " + name + "!");
-  }
-}
-        </pre>
-      </td>
-      <td>
-        <pre lang="csharp">
-using System;
-
-namespace Hello {
-  public class HelloWorld {
-    public static void Main(string[] args) {
-      string name = "C#";
-
-      Console.WriteLine("Hello, " + name + "!");
-    }
-  }
-}
-        </pre>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-## Comments
-
-<table>
-  <thead>
-    <tr>
-      <th>Java</th>
-      <th>C#</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <pre lang="java">
+      <pre><code class="language-javascript">
 // Single line
 /* Multiple
     line */
-/** Javadoc documentation comments */
-        </pre>
+/** JavaScript documentation comments */
+        </code></pre>
       </td>
       <td>
         <pre lang="csharp">
@@ -81,20 +38,20 @@ namespace Hello {
 <table>
   <thead>
     <tr>
-      <th>Java</th>
+      <th>JavaScript</th>
       <th>C#</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        <pre lang="java">
+        <pre><code class="language-javascript">
 // Primitive Types
 boolean
-byte
-char
-short, int, long
-float, double
+null
+undefined
+Number
+Symbol
 
 // Reference Types
 Object // (superclass of all other classes)
@@ -102,7 +59,7 @@ String
 arrays, classes
 
 // int to String
-int x = 123;
+var x = Number(123);
 String y = Integer.toString(x); // y is "123"
 
 // String to int
@@ -112,7 +69,7 @@ x = Integer.parseInt(y); // x is 456
 // double to int
 double z = 3.5;
 x = (int)z; // x is 3 (truncates decimal)
-        </pre>
+        </code></pre>
       </td>
       <td>
         <pre lang="csharp">
