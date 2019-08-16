@@ -167,7 +167,7 @@ Math.Pow(x, y)
 <table>
   <thead>
     <tr>
-      <th>Java</th>
+      <th>JavaScript</th>
       <th>C#</th>
     </tr>
   </thead>
@@ -176,12 +176,12 @@ Math.Pow(x, y)
       <td>
         <pre lang="javascript">
 var greeting = (age < 20) ? "What's up?" : "Hello";
-
+<br>
 if (x < y)
 {
   alert("greater");
 }
-
+<br>
 if (x != 100) 
 {    
   x *= 5;
@@ -190,7 +190,7 @@ if (x != 100)
 {
   z *= 6;
 }
-
+<br>
 var selection = 2;
 switch (selection) {      
   case 1: x++;   // Falls through to next case if no break
