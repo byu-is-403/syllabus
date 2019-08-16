@@ -120,10 +120,19 @@ x = (int) z;   // x is 3  (truncates decimal)
       <td>
         <pre lang="javascript">
 // Comparison
-==  <  >  <=  >=  != === //checks the value AND the type
+==  
+<  
+>  
+<=  
+>=  
+!= 
+=== //checks the value AND the type
 
 // Arithmetic
-+  -  *  /
++  
+-  
+*  
+/
 %  // mod
 
 // Assignment
