@@ -122,7 +122,7 @@ x = (int) z;   // x is 3  (truncates decimal)
 // Comparison
 ==  <  >  <=  >=  !=
 
-
+// Arithmetic
 +  -  *  /
 %  // mod
 
