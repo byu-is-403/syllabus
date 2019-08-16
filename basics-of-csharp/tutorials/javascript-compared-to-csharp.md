@@ -106,59 +106,31 @@ x = (int) z;   // x is 3  (truncates decimal)
 </table>
 
 
-## Constants
-
-<table>
-  <thead>
-    <tr>
-      <th>Java</th>
-      <th>C#</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <pre lang="java">
-// May be initialized in a constructor
-final double PI = 3.14;
-        </pre>
-      </td>
-      <td>
-        <pre lang="csharp">
-const double PI = 3.14;
-        </pre>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## Operators
 
 <table>
   <thead>
     <tr>
-      <th>Java</th>
+      <th>JavaScript</th>
       <th>C#</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        <pre lang="java">
+        <pre lang="javascript">
 // Comparison
-==  <  >  <=  >=  !=
+==  <  >  <=  >=  != === //checks the value AND the type
 
 // Arithmetic
 +  -  *  /
 %  // mod
-/  // integer division if both operands are ints
-Math.Pow(x, y)
 
 // Assignment
 =  +=  -=  *=  /=  %=  ^=  ++  --
 
 // Logical
-&&  ||  &  |  ^  !  // Note: && and || perform short-circuit evaluations
+&&  ||  &  |  ^  ! 
 
 // String Concatenation
 +
