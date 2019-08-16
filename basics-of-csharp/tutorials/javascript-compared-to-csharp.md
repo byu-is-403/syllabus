@@ -12,12 +12,12 @@
   <tbody>
     <tr>
       <td>
-      <pre><code class="language-javascript">
+      <pre lang="javascript">
 // Single line
 /* Multiple
     line */
 /** JavaScript documentation comments */
-        </code></pre>
+      </pre>
       </td>
       <td>
         <pre lang="csharp">
@@ -45,7 +45,7 @@
   <tbody>
     <tr>
       <td>
-        <pre><code class="language-javascript">
+      <pre lang="javascript">
 // Primitive Types
 boolean
 null
@@ -60,16 +60,17 @@ arrays, classes
 
 // int to String
 var x = Number(123);
-String y = Integer.toString(x); // y is "123"
+var y = String(x); // y is "123"
+var z = x.toString();
 
 // String to int
-y = "456";
-x = Integer.parseInt(y); // x is 456
+var y = "456";
+var x = parseInt(y); // x is 456
 
-// double to int
-double z = 3.5;
-x = (int)z; // x is 3 (truncates decimal)
-        </code></pre>
+// String to double
+var y = "456.5";
+var x = parseFloat(y); //x is 456.5
+      </pre>
       </td>
       <td>
         <pre lang="csharp">
